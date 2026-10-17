@@ -1,0 +1,1460 @@
+{
+  "graph": "promisegraph_live_demo",
+  "mode": "live Gemini extraction",
+  "review": "Synthetic QA runner checked extracted tuples and exact spans against the hand-authored expected baseline before invoking the normal review method. Not human-reviewed extraction accuracy.",
+  "documents": [
+    {
+      "id": "doc_fb66887ea9dccd7b916ee594",
+      "title": "Customer launch commitments",
+      "fact_count": 3,
+      "verified": true
+    },
+    {
+      "id": "doc_8f093c7408ccb560dcee1d95",
+      "title": "SSO delivery plan \u00b7 required work",
+      "fact_count": 8,
+      "verified": true
+    },
+    {
+      "id": "doc_24b61ce624319a76f90832e0",
+      "title": "Platform delivery update",
+      "fact_count": 1,
+      "verified": true
+    }
+  ],
+  "errors": [],
+  "assessment": {
+    "assessments": [
+      {
+        "id": "acme_sso",
+        "name": "Acme SSO launch",
+        "customer": "Acme",
+        "status": "at_risk",
+        "label": "At risk",
+        "deadline": "2026-11-04",
+        "flags": [
+          "forecast_order_conflict"
+        ],
+        "conflicts": [
+          {
+            "work_id": "rotation",
+            "work_name": "signing-key rotation",
+            "forecast": "2026-11-06",
+            "deadline": "2026-11-04",
+            "forecast_fact_id": "fact_cb57c2a4bfb2e01590b3275a",
+            "deadline_fact_id": "fact_f6d3de515826995d976c92a6",
+            "path": {
+              "nodes": [
+                "acme_sso",
+                "sso",
+                "identity",
+                "rotation"
+              ],
+              "facts": [
+                "fact_67b428387807e0e29441946a",
+                "fact_e8b3d46c0f9ee1f11a0c83e5",
+                "fact_05a96d12c10a90a4e62737d6"
+              ]
+            }
+          }
+        ],
+        "forecast_order_conflicts": [
+          {
+            "dependent": "identity",
+            "prerequisite": "rotation",
+            "dependent_date": "2026-11-03",
+            "prerequisite_date": "2026-11-06",
+            "fact_ids": [
+              "fact_95086113ec0f79e397e46fe2",
+              "fact_cb57c2a4bfb2e01590b3275a",
+              "fact_05a96d12c10a90a4e62737d6"
+            ]
+          }
+        ],
+        "paths": [
+          {
+            "nodes": [
+              "acme_sso",
+              "sso"
+            ],
+            "facts": [
+              "fact_67b428387807e0e29441946a"
+            ]
+          },
+          {
+            "nodes": [
+              "acme_sso",
+              "sso",
+              "security"
+            ],
+            "facts": [
+              "fact_67b428387807e0e29441946a",
+              "fact_60c5fc4de8e3e168451d688f"
+            ]
+          },
+          {
+            "nodes": [
+              "acme_sso",
+              "sso",
+              "identity"
+            ],
+            "facts": [
+              "fact_67b428387807e0e29441946a",
+              "fact_e8b3d46c0f9ee1f11a0c83e5"
+            ]
+          },
+          {
+            "nodes": [
+              "acme_sso",
+              "sso",
+              "identity",
+              "rotation"
+            ],
+            "facts": [
+              "fact_67b428387807e0e29441946a",
+              "fact_e8b3d46c0f9ee1f11a0c83e5",
+              "fact_05a96d12c10a90a4e62737d6"
+            ]
+          }
+        ],
+        "known_work_count": 4,
+        "evidence_ids": [
+          "fact_05a96d12c10a90a4e62737d6",
+          "fact_60c5fc4de8e3e168451d688f",
+          "fact_67b428387807e0e29441946a",
+          "fact_708c35f6090f14634384efb0",
+          "fact_95086113ec0f79e397e46fe2",
+          "fact_cb57c2a4bfb2e01590b3275a",
+          "fact_e268027d18f08ebdffe95a42",
+          "fact_e8b3d46c0f9ee1f11a0c83e5",
+          "fact_f6d3de515826995d976c92a6"
+        ],
+        "limitation": "Known forecasts only. Downstream work and delivery feasibility are unassessed."
+      },
+      {
+        "id": "beacon_sso",
+        "name": "Beacon SSO launch",
+        "customer": "Beacon",
+        "status": "at_risk",
+        "label": "At risk",
+        "deadline": "2026-11-04",
+        "flags": [
+          "forecast_order_conflict"
+        ],
+        "conflicts": [
+          {
+            "work_id": "rotation",
+            "work_name": "signing-key rotation",
+            "forecast": "2026-11-06",
+            "deadline": "2026-11-04",
+            "forecast_fact_id": "fact_cb57c2a4bfb2e01590b3275a",
+            "deadline_fact_id": "fact_492254e9704e827aaad1a9eb",
+            "path": {
+              "nodes": [
+                "beacon_sso",
+                "sso",
+                "identity",
+                "rotation"
+              ],
+              "facts": [
+                "fact_c6f2f0879ff50b1ca20797f6",
+                "fact_e8b3d46c0f9ee1f11a0c83e5",
+                "fact_05a96d12c10a90a4e62737d6"
+              ]
+            }
+          }
+        ],
+        "forecast_order_conflicts": [
+          {
+            "dependent": "identity",
+            "prerequisite": "rotation",
+            "dependent_date": "2026-11-03",
+            "prerequisite_date": "2026-11-06",
+            "fact_ids": [
+              "fact_95086113ec0f79e397e46fe2",
+              "fact_cb57c2a4bfb2e01590b3275a",
+              "fact_05a96d12c10a90a4e62737d6"
+            ]
+          }
+        ],
+        "paths": [
+          {
+            "nodes": [
+              "beacon_sso",
+              "sso"
+            ],
+            "facts": [
+              "fact_c6f2f0879ff50b1ca20797f6"
+            ]
+          },
+          {
+            "nodes": [
+              "beacon_sso",
+              "sso",
+              "security"
+            ],
+            "facts": [
+              "fact_c6f2f0879ff50b1ca20797f6",
+              "fact_60c5fc4de8e3e168451d688f"
+            ]
+          },
+          {
+            "nodes": [
+              "beacon_sso",
+              "sso",
+              "identity"
+            ],
+            "facts": [
+              "fact_c6f2f0879ff50b1ca20797f6",
+              "fact_e8b3d46c0f9ee1f11a0c83e5"
+            ]
+          },
+          {
+            "nodes": [
+              "beacon_sso",
+              "sso",
+              "identity",
+              "rotation"
+            ],
+            "facts": [
+              "fact_c6f2f0879ff50b1ca20797f6",
+              "fact_e8b3d46c0f9ee1f11a0c83e5",
+              "fact_05a96d12c10a90a4e62737d6"
+            ]
+          }
+        ],
+        "known_work_count": 4,
+        "evidence_ids": [
+          "fact_05a96d12c10a90a4e62737d6",
+          "fact_492254e9704e827aaad1a9eb",
+          "fact_60c5fc4de8e3e168451d688f",
+          "fact_708c35f6090f14634384efb0",
+          "fact_95086113ec0f79e397e46fe2",
+          "fact_c6f2f0879ff50b1ca20797f6",
+          "fact_cb57c2a4bfb2e01590b3275a",
+          "fact_e268027d18f08ebdffe95a42",
+          "fact_e8b3d46c0f9ee1f11a0c83e5"
+        ],
+        "limitation": "Known forecasts only. Downstream work and delivery feasibility are unassessed."
+      },
+      {
+        "id": "cedar_export",
+        "name": "Cedar data export",
+        "customer": "Cedar",
+        "status": "unknown",
+        "label": "Cannot assess",
+        "deadline": "2026-11-08",
+        "flags": [
+          "unlinked_commitment"
+        ],
+        "conflicts": [],
+        "forecast_order_conflicts": [],
+        "paths": [],
+        "known_work_count": 0,
+        "evidence_ids": [
+          "fact_7c72e0dfb8538138b66edb8f"
+        ],
+        "limitation": "Known forecasts only. Downstream work and delivery feasibility are unassessed."
+      }
+    ],
+    "evidence": {
+      "fact_f6d3de515826995d976c92a6": {
+        "fact": {
+          "id": "fact_f6d3de515826995d976c92a6",
+          "kind": "deadline",
+          "subject_id": "acme_sso",
+          "object_id": "",
+          "raw_subject": "Acme SSO commitment",
+          "raw_object": "",
+          "date": "2026-11-04",
+          "date_expression": "November 4, 2026",
+          "quote": "Acme SSO commitment has a promised deadline of November 4, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_fb66887ea9dccd7b916ee594",
+          "span_id": "span_a4d008d52327d3a487a0d892",
+          "start": 0,
+          "end": 64,
+          "mode": "live",
+          "slot_id": "acme_sso|deadline",
+          "reviewed_at": "2026-10-16T22:16:55.680716+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_a4d008d52327d3a487a0d892",
+          "start": 0,
+          "end": 64,
+          "quote": "Acme SSO commitment has a promised deadline of November 4, 2026."
+        },
+        "document": {
+          "id": "doc_fb66887ea9dccd7b916ee594",
+          "title": "Customer launch commitments",
+          "source_type": "meeting",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "maya",
+          "name": "Maya Chen",
+          "role": "Customer success"
+        }
+      },
+      "fact_492254e9704e827aaad1a9eb": {
+        "fact": {
+          "id": "fact_492254e9704e827aaad1a9eb",
+          "kind": "deadline",
+          "subject_id": "beacon_sso",
+          "object_id": "",
+          "raw_subject": "Beacon SSO commitment",
+          "raw_object": "",
+          "date": "2026-11-04",
+          "date_expression": "November 4, 2026",
+          "quote": "Beacon SSO commitment has a promised deadline of November 4, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_fb66887ea9dccd7b916ee594",
+          "span_id": "span_01e1aa40709dc459cbcd27f4",
+          "start": 65,
+          "end": 131,
+          "mode": "live",
+          "slot_id": "beacon_sso|deadline",
+          "reviewed_at": "2026-10-16T22:16:55.861603+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_01e1aa40709dc459cbcd27f4",
+          "start": 65,
+          "end": 131,
+          "quote": "Beacon SSO commitment has a promised deadline of November 4, 2026."
+        },
+        "document": {
+          "id": "doc_fb66887ea9dccd7b916ee594",
+          "title": "Customer launch commitments",
+          "source_type": "meeting",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "maya",
+          "name": "Maya Chen",
+          "role": "Customer success"
+        }
+      },
+      "fact_7c72e0dfb8538138b66edb8f": {
+        "fact": {
+          "id": "fact_7c72e0dfb8538138b66edb8f",
+          "kind": "deadline",
+          "subject_id": "cedar_export",
+          "object_id": "",
+          "raw_subject": "Cedar data export",
+          "raw_object": "",
+          "date": "2026-11-08",
+          "date_expression": "November 8, 2026",
+          "quote": "Cedar data export has a promised deadline of November 8, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_fb66887ea9dccd7b916ee594",
+          "span_id": "span_4e65a8369196327308940667",
+          "start": 132,
+          "end": 194,
+          "mode": "live",
+          "slot_id": "cedar_export|deadline",
+          "reviewed_at": "2026-10-16T22:16:56.030951+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_4e65a8369196327308940667",
+          "start": 132,
+          "end": 194,
+          "quote": "Cedar data export has a promised deadline of November 8, 2026."
+        },
+        "document": {
+          "id": "doc_fb66887ea9dccd7b916ee594",
+          "title": "Customer launch commitments",
+          "source_type": "meeting",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "maya",
+          "name": "Maya Chen",
+          "role": "Customer success"
+        }
+      },
+      "fact_67b428387807e0e29441946a": {
+        "fact": {
+          "id": "fact_67b428387807e0e29441946a",
+          "kind": "requires",
+          "subject_id": "acme_sso",
+          "object_id": "sso",
+          "raw_subject": "Acme",
+          "raw_object": "SSO rollout",
+          "date": "",
+          "date_expression": "",
+          "quote": "Acme SSO commitment requires SSO rollout.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_8526f67f02adb8ea76fd8cb5",
+          "start": 0,
+          "end": 41,
+          "mode": "live",
+          "slot_id": "acme_sso|requires",
+          "reviewed_at": "2026-10-16T22:17:19.161632+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_8526f67f02adb8ea76fd8cb5",
+          "start": 0,
+          "end": 41,
+          "quote": "Acme SSO commitment requires SSO rollout."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_c6f2f0879ff50b1ca20797f6": {
+        "fact": {
+          "id": "fact_c6f2f0879ff50b1ca20797f6",
+          "kind": "requires",
+          "subject_id": "beacon_sso",
+          "object_id": "sso",
+          "raw_subject": "Beacon",
+          "raw_object": "SSO rollout",
+          "date": "",
+          "date_expression": "",
+          "quote": "Beacon SSO commitment requires SSO rollout.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_787e1dd0208cd421d6b24651",
+          "start": 42,
+          "end": 85,
+          "mode": "live",
+          "slot_id": "beacon_sso|requires",
+          "reviewed_at": "2026-10-16T22:17:19.301701+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_787e1dd0208cd421d6b24651",
+          "start": 42,
+          "end": 85,
+          "quote": "Beacon SSO commitment requires SSO rollout."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_e8b3d46c0f9ee1f11a0c83e5": {
+        "fact": {
+          "id": "fact_e8b3d46c0f9ee1f11a0c83e5",
+          "kind": "requires",
+          "subject_id": "sso",
+          "object_id": "identity",
+          "raw_subject": "SSO rollout",
+          "raw_object": "identity migration",
+          "date": "",
+          "date_expression": "",
+          "quote": "SSO rollout requires identity migration.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_69732ef0a24ff0d5a88312b5",
+          "start": 86,
+          "end": 126,
+          "mode": "live",
+          "slot_id": "sso|requires",
+          "reviewed_at": "2026-10-16T22:17:19.436607+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_69732ef0a24ff0d5a88312b5",
+          "start": 86,
+          "end": 126,
+          "quote": "SSO rollout requires identity migration."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_05a96d12c10a90a4e62737d6": {
+        "fact": {
+          "id": "fact_05a96d12c10a90a4e62737d6",
+          "kind": "requires",
+          "subject_id": "identity",
+          "object_id": "rotation",
+          "raw_subject": "identity migration",
+          "raw_object": "signing-key rotation",
+          "date": "",
+          "date_expression": "",
+          "quote": "identity migration requires signing-key rotation.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_aa97569ca1d9e7224d1798eb",
+          "start": 127,
+          "end": 176,
+          "mode": "live",
+          "slot_id": "identity|requires",
+          "reviewed_at": "2026-10-16T22:17:19.570965+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_aa97569ca1d9e7224d1798eb",
+          "start": 127,
+          "end": 176,
+          "quote": "identity migration requires signing-key rotation."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_60c5fc4de8e3e168451d688f": {
+        "fact": {
+          "id": "fact_60c5fc4de8e3e168451d688f",
+          "kind": "requires",
+          "subject_id": "sso",
+          "object_id": "security",
+          "raw_subject": "SSO rollout",
+          "raw_object": "security review",
+          "date": "",
+          "date_expression": "",
+          "quote": "SSO rollout requires security review.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_36d1930ed200b08c41ba7fee",
+          "start": 177,
+          "end": 214,
+          "mode": "live",
+          "slot_id": "sso|requires",
+          "reviewed_at": "2026-10-16T22:17:19.701288+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_36d1930ed200b08c41ba7fee",
+          "start": 177,
+          "end": 214,
+          "quote": "SSO rollout requires security review."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_e268027d18f08ebdffe95a42": {
+        "fact": {
+          "id": "fact_e268027d18f08ebdffe95a42",
+          "kind": "forecast",
+          "subject_id": "sso",
+          "object_id": "",
+          "raw_subject": "SSO rollout",
+          "raw_object": "",
+          "date": "2026-11-03",
+          "date_expression": "November 3, 2026",
+          "quote": "SSO rollout is forecast to finish on November 3, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_e85d8e6ee6ee87c2cb594499",
+          "start": 215,
+          "end": 269,
+          "mode": "live",
+          "slot_id": "sso|forecast",
+          "reviewed_at": "2026-10-16T22:17:19.832389+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_e85d8e6ee6ee87c2cb594499",
+          "start": 215,
+          "end": 269,
+          "quote": "SSO rollout is forecast to finish on November 3, 2026."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_95086113ec0f79e397e46fe2": {
+        "fact": {
+          "id": "fact_95086113ec0f79e397e46fe2",
+          "kind": "forecast",
+          "subject_id": "identity",
+          "object_id": "",
+          "raw_subject": "identity migration",
+          "raw_object": "",
+          "date": "2026-11-03",
+          "date_expression": "November 3, 2026",
+          "quote": "identity migration is forecast to finish on November 3, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_c6e2c7a78d1c0f41f421ff0a",
+          "start": 270,
+          "end": 331,
+          "mode": "live",
+          "slot_id": "identity|forecast",
+          "reviewed_at": "2026-10-16T22:17:19.994699+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_c6e2c7a78d1c0f41f421ff0a",
+          "start": 270,
+          "end": 331,
+          "quote": "identity migration is forecast to finish on November 3, 2026."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_708c35f6090f14634384efb0": {
+        "fact": {
+          "id": "fact_708c35f6090f14634384efb0",
+          "kind": "forecast",
+          "subject_id": "security",
+          "object_id": "",
+          "raw_subject": "security review",
+          "raw_object": "",
+          "date": "2026-11-03",
+          "date_expression": "November 3, 2026",
+          "quote": "security review is forecast to finish on November 3, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_8f093c7408ccb560dcee1d95",
+          "span_id": "span_4ea0dd2e9fedac64ccf6daef",
+          "start": 332,
+          "end": 390,
+          "mode": "live",
+          "slot_id": "security|forecast",
+          "reviewed_at": "2026-10-16T22:17:20.163527+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_4ea0dd2e9fedac64ccf6daef",
+          "start": 332,
+          "end": 390,
+          "quote": "security review is forecast to finish on November 3, 2026."
+        },
+        "document": {
+          "id": "doc_8f093c7408ccb560dcee1d95",
+          "title": "SSO delivery plan \u00b7 required work",
+          "source_type": "ticket",
+          "timestamp": "2026-11-01T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering"
+        }
+      },
+      "fact_cb57c2a4bfb2e01590b3275a": {
+        "fact": {
+          "id": "fact_cb57c2a4bfb2e01590b3275a",
+          "kind": "forecast",
+          "subject_id": "rotation",
+          "object_id": "",
+          "raw_subject": "signing-key rotation",
+          "raw_object": "",
+          "date": "2026-11-06",
+          "date_expression": "November 6, 2026",
+          "quote": "signing-key rotation is now forecast to finish on November 6, 2026.",
+          "old_date": "",
+          "status": "accepted",
+          "validation_flags": [],
+          "doc_id": "doc_24b61ce624319a76f90832e0",
+          "span_id": "span_c5dc9eb1eef85ad309ccd2b7",
+          "start": 8,
+          "end": 75,
+          "mode": "live",
+          "slot_id": "rotation|forecast",
+          "reviewed_at": "2026-10-16T22:17:42.262822+05:30",
+          "review_reason": "Synthetic QA setup: tuple and exact span checked against expected baseline; not a human extraction score"
+        },
+        "span": {
+          "id": "span_c5dc9eb1eef85ad309ccd2b7",
+          "start": 8,
+          "end": 75,
+          "quote": "signing-key rotation is now forecast to finish on November 6, 2026."
+        },
+        "document": {
+          "id": "doc_24b61ce624319a76f90832e0",
+          "title": "Platform delivery update",
+          "source_type": "chat",
+          "timestamp": "2026-11-02T10:00:00+05:30",
+          "timezone": "Asia/Kolkata",
+          "mode": "live",
+          "model": "gemini-3.5-flash-lite"
+        },
+        "author": {
+          "id": "priya",
+          "name": "Priya Shah",
+          "role": "Platform"
+        }
+      }
+    },
+    "history": [],
+    "entities": [
+      {
+        "id": "acme_sso",
+        "kind": "commitment",
+        "name": "Acme SSO launch",
+        "customer": "Acme",
+        "aliases": [
+          "Acme SSO launch",
+          "Acme SSO commitment",
+          "Acme",
+          "Acme Corp"
+        ]
+      },
+      {
+        "id": "beacon_sso",
+        "kind": "commitment",
+        "name": "Beacon SSO launch",
+        "customer": "Beacon",
+        "aliases": [
+          "Beacon SSO launch",
+          "Beacon SSO commitment",
+          "Beacon"
+        ]
+      },
+      {
+        "id": "cedar_export",
+        "kind": "commitment",
+        "name": "Cedar data export",
+        "customer": "Cedar",
+        "aliases": [
+          "Cedar data export",
+          "Cedar"
+        ]
+      },
+      {
+        "id": "sso",
+        "kind": "work",
+        "name": "SSO rollout",
+        "aliases": [
+          "SSO rollout",
+          "SSO",
+          "single sign-on rollout"
+        ]
+      },
+      {
+        "id": "identity",
+        "kind": "work",
+        "name": "identity migration",
+        "aliases": [
+          "identity migration",
+          "authentication migration"
+        ]
+      },
+      {
+        "id": "rotation",
+        "kind": "work",
+        "name": "signing-key rotation",
+        "aliases": [
+          "signing-key rotation",
+          "signing key rotation"
+        ]
+      },
+      {
+        "id": "security",
+        "kind": "work",
+        "name": "security review",
+        "aliases": [
+          "security review"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "acme_sso",
+        "target": "sso",
+        "fact_id": "fact_67b428387807e0e29441946a"
+      },
+      {
+        "source": "beacon_sso",
+        "target": "sso",
+        "fact_id": "fact_c6f2f0879ff50b1ca20797f6"
+      },
+      {
+        "source": "sso",
+        "target": "identity",
+        "fact_id": "fact_e8b3d46c0f9ee1f11a0c83e5"
+      },
+      {
+        "source": "sso",
+        "target": "security",
+        "fact_id": "fact_60c5fc4de8e3e168451d688f"
+      },
+      {
+        "source": "identity",
+        "target": "rotation",
+        "fact_id": "fact_05a96d12c10a90a4e62737d6"
+      }
+    ],
+    "exposure": [
+      {
+        "id": "identity",
+        "name": "identity migration",
+        "commitments": [
+          "acme_sso",
+          "beacon_sso"
+        ],
+        "count": 2,
+        "label": "Known linked commitments; not an at-risk count"
+      },
+      {
+        "id": "rotation",
+        "name": "signing-key rotation",
+        "commitments": [
+          "acme_sso",
+          "beacon_sso"
+        ],
+        "count": 2,
+        "label": "Known linked commitments; not an at-risk count"
+      },
+      {
+        "id": "security",
+        "name": "security review",
+        "commitments": [
+          "acme_sso",
+          "beacon_sso"
+        ],
+        "count": 2,
+        "label": "Known linked commitments; not an at-risk count"
+      },
+      {
+        "id": "sso",
+        "name": "SSO rollout",
+        "commitments": [
+          "acme_sso",
+          "beacon_sso"
+        ],
+        "count": 2,
+        "label": "Known linked commitments; not an at-risk count"
+      }
+    ],
+    "query_trace": [
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_fb66887ea9dccd7b916ee594"
+        },
+        "elapsed_ms": 32.4
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_fb66887ea9dccd7b916ee594"
+        },
+        "elapsed_ms": 33.62
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_f6d3de515826995d976c92a6"
+        },
+        "elapsed_ms": 40.82
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_fb66887ea9dccd7b916ee594"
+        },
+        "elapsed_ms": 32.55
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "acme_sso|deadline"
+        },
+        "elapsed_ms": 33.57
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_f6d3de515826995d976c92a6"
+        },
+        "elapsed_ms": 35.43
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_492254e9704e827aaad1a9eb"
+        },
+        "elapsed_ms": 33.62
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_fb66887ea9dccd7b916ee594"
+        },
+        "elapsed_ms": 35.64
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "beacon_sso|deadline"
+        },
+        "elapsed_ms": 35.27
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_492254e9704e827aaad1a9eb"
+        },
+        "elapsed_ms": 35.44
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_7c72e0dfb8538138b66edb8f"
+        },
+        "elapsed_ms": 36.19
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_fb66887ea9dccd7b916ee594"
+        },
+        "elapsed_ms": 33.27
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "cedar_export|deadline"
+        },
+        "elapsed_ms": 32.04
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_7c72e0dfb8538138b66edb8f"
+        },
+        "elapsed_ms": 34.42
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 33.42
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 41.29
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_67b428387807e0e29441946a"
+        },
+        "elapsed_ms": 33.63
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 34.36
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_67b428387807e0e29441946a"
+        },
+        "elapsed_ms": 34.64
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_c6f2f0879ff50b1ca20797f6"
+        },
+        "elapsed_ms": 33.45
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 32.56
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_c6f2f0879ff50b1ca20797f6"
+        },
+        "elapsed_ms": 35.59
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_e8b3d46c0f9ee1f11a0c83e5"
+        },
+        "elapsed_ms": 32.73
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 33.76
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_e8b3d46c0f9ee1f11a0c83e5"
+        },
+        "elapsed_ms": 32.51
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_05a96d12c10a90a4e62737d6"
+        },
+        "elapsed_ms": 32.07
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 33.46
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_05a96d12c10a90a4e62737d6"
+        },
+        "elapsed_ms": 33.35
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_60c5fc4de8e3e168451d688f"
+        },
+        "elapsed_ms": 31.88
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 32.18
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_60c5fc4de8e3e168451d688f"
+        },
+        "elapsed_ms": 32.98
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_e268027d18f08ebdffe95a42"
+        },
+        "elapsed_ms": 33.19
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 32.28
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "sso|forecast"
+        },
+        "elapsed_ms": 32.74
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_e268027d18f08ebdffe95a42"
+        },
+        "elapsed_ms": 30.88
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_95086113ec0f79e397e46fe2"
+        },
+        "elapsed_ms": 33.0
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 34.61
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "identity|forecast"
+        },
+        "elapsed_ms": 33.69
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_95086113ec0f79e397e46fe2"
+        },
+        "elapsed_ms": 32.76
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_708c35f6090f14634384efb0"
+        },
+        "elapsed_ms": 34.12
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_8f093c7408ccb560dcee1d95"
+        },
+        "elapsed_ms": 32.24
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "security|forecast"
+        },
+        "elapsed_ms": 33.89
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_708c35f6090f14634384efb0"
+        },
+        "elapsed_ms": 32.83
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_24b61ce624319a76f90832e0"
+        },
+        "elapsed_ms": 31.45
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_24b61ce624319a76f90832e0"
+        },
+        "elapsed_ms": 32.27
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_cb57c2a4bfb2e01590b3275a"
+        },
+        "elapsed_ms": 32.32
+      },
+      {
+        "name": "document",
+        "cypher": "MATCH (d:Document {id:$id}) RETURN properties(d)",
+        "parameters": {
+          "id": "doc_24b61ce624319a76f90832e0"
+        },
+        "elapsed_ms": 33.03
+      },
+      {
+        "name": "current",
+        "cypher": "MATCH (s:Slot {id:$id})\nOPTIONAL MATCH (f:Fact {id:s.current}) RETURN properties(f)",
+        "parameters": {
+          "id": "rotation|forecast"
+        },
+        "elapsed_ms": 31.42
+      },
+      {
+        "name": "fact",
+        "cypher": "MATCH (f:Fact {id:$id}) RETURN properties(f)",
+        "parameters": {
+          "id": "fact_cb57c2a4bfb2e01590b3275a"
+        },
+        "elapsed_ms": 34.51
+      },
+      {
+        "name": "entities",
+        "cypher": "MATCH (e:Entity) RETURN properties(e)",
+        "parameters": {},
+        "elapsed_ms": 34.02
+      },
+      {
+        "name": "facts",
+        "cypher": "MATCH (f:Fact) RETURN properties(f)",
+        "parameters": {},
+        "elapsed_ms": 33.81
+      },
+      {
+        "name": "documents",
+        "cypher": "MATCH (d:Document) RETURN properties(d)",
+        "parameters": {},
+        "elapsed_ms": 32.48
+      },
+      {
+        "name": "slots",
+        "cypher": "MATCH (s:Slot) RETURN s.id, s.current",
+        "parameters": {},
+        "elapsed_ms": 33.95
+      },
+      {
+        "name": "dependencies",
+        "cypher": "MATCH (a:Entity)-[r:REQUIRES]->(b:Entity) RETURN a.id,b.id,r.fact_id",
+        "parameters": {},
+        "elapsed_ms": 32.91
+      },
+      {
+        "name": "paths",
+        "cypher": "MATCH p=(c:Entity {id:$id})-[:REQUIRES*1..8]->(w:Entity)\nRETURN [n IN nodes(p) | n.id] AS node_ids,\n       [r IN relationships(p) | r.fact_id] AS fact_ids\nLIMIT 201\n\n",
+        "parameters": {
+          "id": "acme_sso"
+        },
+        "elapsed_ms": 33.12
+      },
+      {
+        "name": "paths",
+        "cypher": "MATCH p=(c:Entity {id:$id})-[:REQUIRES*1..8]->(w:Entity)\nRETURN [n IN nodes(p) | n.id] AS node_ids,\n       [r IN relationships(p) | r.fact_id] AS fact_ids\nLIMIT 201\n\n",
+        "parameters": {
+          "id": "beacon_sso"
+        },
+        "elapsed_ms": 33.99
+      },
+      {
+        "name": "paths",
+        "cypher": "MATCH p=(c:Entity {id:$id})-[:REQUIRES*1..8]->(w:Entity)\nRETURN [n IN nodes(p) | n.id] AS node_ids,\n       [r IN relationships(p) | r.fact_id] AS fact_ids\nLIMIT 201\n\n",
+        "parameters": {
+          "id": "cedar_export"
+        },
+        "elapsed_ms": 33.94
+      },
+      {
+        "name": "history",
+        "cypher": "MATCH (new:Fact)-[:SUPERSEDES]->(old:Fact)\nRETURN properties(new), properties(old)\n",
+        "parameters": {},
+        "elapsed_ms": 33.32
+      },
+      {
+        "name": "evidence",
+        "cypher": "MATCH (f:Fact)-[:SUPPORTED_BY]->(s:Span)<-[:HAS_SPAN]-(d:Document)\nWHERE f.id IN $ids\nOPTIONAL MATCH (p:Person)-[:AUTHORED]->(d)\nRETURN properties(f), properties(s), properties(d), properties(p)\n\n",
+        "parameters": {
+          "ids": [
+            "fact_c6f2f0879ff50b1ca20797f6",
+            "fact_67b428387807e0e29441946a",
+            "fact_95086113ec0f79e397e46fe2",
+            "fact_708c35f6090f14634384efb0",
+            "fact_7c72e0dfb8538138b66edb8f",
+            "fact_cb57c2a4bfb2e01590b3275a",
+            "fact_60c5fc4de8e3e168451d688f",
+            "fact_e268027d18f08ebdffe95a42",
+            "fact_e8b3d46c0f9ee1f11a0c83e5",
+            "fact_05a96d12c10a90a4e62737d6",
+            "fact_492254e9704e827aaad1a9eb",
+            "fact_f6d3de515826995d976c92a6"
+          ]
+        },
+        "elapsed_ms": 72.44
+      }
+    ],
+    "source_modes": [
+      "live"
+    ],
+    "documents": [
+      {
+        "id": "doc_fb66887ea9dccd7b916ee594",
+        "title": "Customer launch commitments",
+        "text": "Acme SSO commitment has a promised deadline of November 4, 2026.\nBeacon SSO commitment has a promised deadline of November 4, 2026.\nCedar data export has a promised deadline of November 8, 2026.",
+        "timestamp": "2026-11-01T10:00:00+05:30",
+        "timezone": "Asia/Kolkata",
+        "author_id": "maya",
+        "source_type": "meeting",
+        "content_hash": "fb66887ea9dccd7b916ee594",
+        "state": "ready",
+        "mode": "live",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_hash": "5d8078c6479f8fb9",
+        "created_at": "2026-10-16T22:16:46.296463+05:30",
+        "error": ""
+      },
+      {
+        "id": "doc_8f093c7408ccb560dcee1d95",
+        "title": "SSO delivery plan \u00b7 required work",
+        "text": "Acme SSO commitment requires SSO rollout.\nBeacon SSO commitment requires SSO rollout.\nSSO rollout requires identity migration.\nidentity migration requires signing-key rotation.\nSSO rollout requires security review.\nSSO rollout is forecast to finish on November 3, 2026.\nidentity migration is forecast to finish on November 3, 2026.\nsecurity review is forecast to finish on November 3, 2026.",
+        "timestamp": "2026-11-01T10:00:00+05:30",
+        "timezone": "Asia/Kolkata",
+        "author_id": "leo",
+        "source_type": "ticket",
+        "content_hash": "8f093c7408ccb560dcee1d95",
+        "state": "ready",
+        "mode": "live",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_hash": "5d8078c6479f8fb9",
+        "created_at": "2026-10-16T22:17:08.138041+05:30",
+        "error": ""
+      },
+      {
+        "id": "doc_24b61ce624319a76f90832e0",
+        "title": "Platform delivery update",
+        "text": "Update: signing-key rotation is now forecast to finish on November 6, 2026.",
+        "timestamp": "2026-11-02T10:00:00+05:30",
+        "timezone": "Asia/Kolkata",
+        "author_id": "priya",
+        "source_type": "chat",
+        "content_hash": "24b61ce624319a76f90832e0",
+        "state": "ready",
+        "mode": "live",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_hash": "5d8078c6479f8fb9",
+        "created_at": "2026-10-16T22:17:32.266177+05:30",
+        "error": ""
+      }
+    ]
+  }
+}

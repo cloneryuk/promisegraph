@@ -1,0 +1,11 @@
+fastapi==0.104.1
+uvicorn==0.52.4
+pydantic==2.5.2
+jinja2==3.1.6
+httpx==0.25.2
+falkordb==1.8.0
+redis==8.1.0
+python-dotenv==1.2.4
+pytest==7.4.3
+tzdata==2026.2
+

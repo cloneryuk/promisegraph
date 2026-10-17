@@ -1,0 +1,22 @@
+{
+  "backend_contract": "passed",
+  "browser_rendering": "not checked; browser tool access was blocked",
+  "graph": "promisegraph_natural_20261017_073848",
+  "document_count": 5,
+  "pending_review": 1,
+  "cedar_proposal": {
+    "current": "2026-11-08",
+    "proposed": "2026-11-12",
+    "valid": true
+  },
+  "beacon_contributors": [
+    "Leo Martin",
+    "Maya Chen",
+    "Priya Shah"
+  ],
+  "statuses": {
+    "acme_sso": "no_known_conflict",
+    "beacon_sso": "at_risk",
+    "cedar_export": "unknown"
+  }
+}

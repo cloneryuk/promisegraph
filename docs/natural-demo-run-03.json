@@ -1,0 +1,475 @@
+{
+  "graph": "promisegraph_natural_20261017_073728",
+  "model": "gemini-3.5-flash-lite",
+  "temperature": 0,
+  "started_at": "2026-10-17T07:37:28.701299+00:00",
+  "review": "Codex synthetic QA checked each live extraction against the authored expected tuples and exact spans before using the ordinary guarded review method. Not human review or a held-out accuracy benchmark.",
+  "documents": [
+    {
+      "title": "Customer launch commitments",
+      "document": {
+        "id": "doc_92b3fe38232094b57148f20c",
+        "title": "Customer launch commitments",
+        "text": "Customer check-in notes / Maya\n\nAcme's CTO asked us to keep the Acme SSO launch on November 4, 2026; that's the date we committed to on the call.\nBeacon has already booked its onboarding session, so the promised date for the Beacon SSO launch remains November 4, 2026.\nFor the separate Cedar data export, we agreed to deliver by November 8, 2026.\n\nFollow-up for me: chase the export delivery plan before the next check-in. The customers only saw the launch dates, not the engineering board.",
+        "timestamp": "2026-11-01T10:00:00+05:30",
+        "timezone": "Asia/Kolkata",
+        "author_id": "maya",
+        "source_type": "meeting",
+        "content_hash": "92b3fe38232094b57148f20c",
+        "state": "ready",
+        "mode": "live",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_hash": "7f7e86a865ef2813",
+        "created_at": "2026-10-17T13:07:28.731130+05:30",
+        "error": "",
+        "raw_response": "{\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"{\\\"facts\\\": [{\\\"kind\\\": \\\"deadline\\\", \\\"subject\\\": \\\"Acme SSO launch\\\", \\\"object\\\": \\\"\\\", \\\"date_expression\\\": \\\"November 4, 2026\\\", \\\"quote\\\": \\\"Acme's CTO asked us to keep the Acme SSO launch on November 4, 2026; that's the date we committed to on the call.\\\", \\\"polarity\\\": \\\"affirmed\\\", \\\"replaces_date_expression\\\": \\\"\\\"}, {\\\"kind\\\": \\\"deadline\\\", \\\"subject\\\": \\\"Beacon SSO launch\\\", \\\"object\\\": \\\"\\\", \\\"date_expression\\\": \\\"November 4, 2026\\\", \\\"quote\\\": \\\"Beacon has already booked its onboarding session, so the promised date for the Beacon SSO launch remains November 4, 2026.\\\", \\\"polarity\\\": \\\"affirmed\\\", \\\"replaces_date_expression\\\": \\\"\\\"}, {\\\"kind\\\": \\\"deadline\\\", \\\"subject\\\": \\\"Cedar data export\\\", \\\"object\\\": \\\"\\\", \\\"date_expression\\\": \\\"November 8, 2026\\\", \\\"quote\\\": \\\"For the separate Cedar data export, we agreed to deliver by November 8, 2026.\\\", \\\"polarity\\\": \\\"affirmed\\\", \\\"replaces_date_expression\\\": \\\"\\\"}]}\", \"thoughtSignature\": \"EmAKXgFpFH0TNPJ6V9PakM9ayPn8gC8YnNWRH1KpOFEat9Qy2P6jtQleoFVqCcpXy8A3vHEJEDf+AMgH7wvN/hgPVC8bWewP1VzQ1dERXVIAseNGkePU9plLlDiOiYlKWTk=\"}], \"role\": \"model\"}, \"finishReason\": \"STOP\", \"index\": 0}], \"usageMetadata\": {\"promptTokenCount\": 761, \"candidatesTokenCount\": 255, \"totalTokenCount\": 1016, \"promptTokensDetails\": [{\"modality\": \"TEXT\", \"tokenCount\": 761}], \"serviceTier\": \"standard\"}, \"modelVersion\": \"gemini-3.5-flash-lite\", \"responseId\": \"uiXTaviDGbiX4-EPs5aMiAg\", \"_promisegraph_http_attempts\": [{\"status_code\": 200}]}",
+        "request_settings": "{\"temperature\": 0, \"schema_version\": 1}"
+      },
+      "facts": [
+        {
+          "id": "fact_4f9eee4fcb92316f641025a3",
+          "kind": "deadline",
+          "subject_id": "acme_sso",
+          "object_id": "",
+          "raw_subject": "Acme SSO launch",
+          "raw_object": "",
+          "date": "2026-11-04",
+          "date_expression": "November 4, 2026",
+          "quote": "Acme's CTO asked us to keep the Acme SSO launch on November 4, 2026; that's the date we committed to on the call.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_92b3fe38232094b57148f20c",
+          "span_id": "span_ecc33729af4d4a7ca28540d3",
+          "start": 32,
+          "end": 145,
+          "mode": "live",
+          "slot_id": "acme_sso|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_be2a96ce2500f35c3b1649a9",
+          "kind": "deadline",
+          "subject_id": "beacon_sso",
+          "object_id": "",
+          "raw_subject": "Beacon SSO launch",
+          "raw_object": "",
+          "date": "2026-11-04",
+          "date_expression": "November 4, 2026",
+          "quote": "Beacon has already booked its onboarding session, so the promised date for the Beacon SSO launch remains November 4, 2026.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_92b3fe38232094b57148f20c",
+          "span_id": "span_12bb921f378ef18726f8cb69",
+          "start": 146,
+          "end": 268,
+          "mode": "live",
+          "slot_id": "beacon_sso|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_7453b378d0ea7025261db233",
+          "kind": "deadline",
+          "subject_id": "cedar_export",
+          "object_id": "",
+          "raw_subject": "Cedar data export",
+          "raw_object": "",
+          "date": "2026-11-08",
+          "date_expression": "November 8, 2026",
+          "quote": "For the separate Cedar data export, we agreed to deliver by November 8, 2026.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_92b3fe38232094b57148f20c",
+          "span_id": "span_5cf7794d024a7cef35953916",
+          "start": 269,
+          "end": 346,
+          "mode": "live",
+          "slot_id": "cedar_export|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        }
+      ],
+      "expected_tuples": [
+        [
+          "deadline",
+          "acme_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "beacon_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "cedar_export",
+          "",
+          "2026-11-08",
+          ""
+        ]
+      ],
+      "actual_tuples": [
+        [
+          "deadline",
+          "acme_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "beacon_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "cedar_export",
+          "",
+          "2026-11-08",
+          ""
+        ]
+      ],
+      "tuple_match": true,
+      "unique_fact_count": true,
+      "all_spans_valid": true
+    },
+    {
+      "title": "SSO delivery plan · required work",
+      "document": {
+        "id": "doc_63424917ae865fadcb76d752",
+        "title": "SSO delivery plan · required work",
+        "text": "Delivery handoff / Leo\n\nCustomer Success needs the SSO rollout completed before we can deliver the Acme SSO launch.\nThe Beacon SSO launch is waiting on that same SSO rollout, so treat both customer launches as blocked on it.\nFor the SSO rollout to ship, the identity migration has to be finished first.\nPlatform also confirmed that the identity migration must wait for the signing-key rotation to finish.\nThe security review is another required gate for the SSO rollout, alongside the migration work.\nThe board still lists November 3, 2026 as the expected finish for the SSO rollout.\nFor the identity migration, the engineering estimate is completion on November 3, 2026.\nThe security review is also expected to wrap up on November 3, 2026.\n\nThese estimates came from planning. Please cross-check the platform thread before repeating them in a customer update.",
+        "timestamp": "2026-11-01T10:00:00+05:30",
+        "timezone": "Asia/Kolkata",
+        "author_id": "leo",
+        "source_type": "ticket",
+        "content_hash": "63424917ae865fadcb76d752",
+        "state": "ready",
+        "mode": "live",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_hash": "7f7e86a865ef2813",
+        "created_at": "2026-10-17T13:07:44.263678+05:30",
+        "error": "",
+        "raw_response": "{\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"{\\n  \\\"facts\\\": [\\n    {\\n      \\\"kind\\\": \\\"requires\\\",\\n      \\\"subject\\\": \\\"Acme SSO launch\\\",\\n      \\\"object\\\": \\\"SSO rollout\\\",\\n      \\\"date_expression\\\": \\\"\\\",\\n      \\\"quote\\\": \\\"Customer Success needs the SSO rollout completed before we can deliver the Acme SSO launch.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"requires\\\",\\n      \\\"subject\\\": \\\"Beacon SSO launch\\\",\\n      \\\"object\\\": \\\"SSO rollout\\\",\\n      \\\"date_expression\\\": \\\"\\\",\\n      \\\"quote\\\": \\\"The Beacon SSO launch is waiting on that same SSO rollout, so treat both customer launches as blocked on it.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"requires\\\",\\n      \\\"subject\\\": \\\"SSO rollout\\\",\\n      \\\"object\\\": \\\"identity migration\\\",\\n      \\\"date_expression\\\": \\\"\\\",\\n      \\\"quote\\\": \\\"For the SSO rollout to ship, the identity migration has to be finished first.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"requires\\\",\\n      \\\"subject\\\": \\\"identity migration\\\",\\n      \\\"object\\\": \\\"signing-key rotation\\\",\\n      \\\"date_expression\\\": \\\"\\\",\\n      \\\"quote\\\": \\\"Platform also confirmed that the identity migration must wait for the signing-key rotation to finish.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"requires\\\",\\n      \\\"subject\\\": \\\"SSO rollout\\\",\\n      \\\"object\\\": \\\"security review\\\",\\n      \\\"date_expression\\\": \\\"\\\",\\n      \\\"quote\\\": \\\"The security review is another required gate for the SSO rollout, alongside the migration work.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"deadline\\\",\\n      \\\"subject\\\": \\\"SSO rollout\\\",\\n      \\\"object\\\": \\\"\\\",\\n      \\\"date_expression\\\": \\\"November 3, 2026\\\",\\n      \\\"quote\\\": \\\"The board still lists November 3, 2026 as the expected finish for the SSO rollout.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"forecast\\\",\\n      \\\"subject\\\": \\\"identity migration\\\",\\n      \\\"object\\\": \\\"\\\",\\n      \\\"date_expression\\\": \\\"November 3, 2026\\\",\\n      \\\"quote\\\": \\\"For the identity migration, the engineering estimate is completion on November 3, 2026.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"forecast\\\",\\n      \\\"subject\\\": \\\"security review\\\",\\n      \\\"object\\\": \\\"\\\",\\n      \\\"date_expression\\\": \\\"November 3, 2026\\\",\\n      \\\"quote\\\": \\\"The security review is also expected to wrap up on November 3, 2026.\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    }\\n  ]\\n}\", \"thoughtSignature\": \"EmAKXgFpFH0TOOsnFP52WtBSe7hy9XxrYBg20SVitnjdPLE/iCjimHHNjjS5Iy/1pTsiuyj2uDmT91Z5/gc3i//ASIvVGg+Lr4dwj9Ts8solOO/IQUtkdIP17alMucwF8ks=\"}], \"role\": \"model\"}, \"finishReason\": \"STOP\", \"index\": 0}], \"usageMetadata\": {\"promptTokenCount\": 816, \"candidatesTokenCount\": 724, \"totalTokenCount\": 1540, \"promptTokensDetails\": [{\"modality\": \"TEXT\", \"tokenCount\": 816}], \"serviceTier\": \"standard\"}, \"modelVersion\": \"gemini-3.5-flash-lite\", \"responseId\": \"ySXTas7cG8D4juMPkJXpyAU\", \"_promisegraph_http_attempts\": [{\"status_code\": 200}]}",
+        "request_settings": "{\"temperature\": 0, \"schema_version\": 1}"
+      },
+      "facts": [
+        {
+          "id": "fact_f69be7ea8ee91eb0fdc29cc7",
+          "kind": "requires",
+          "subject_id": "acme_sso",
+          "object_id": "sso",
+          "raw_subject": "Acme SSO launch",
+          "raw_object": "SSO rollout",
+          "date": "",
+          "date_expression": "",
+          "quote": "Customer Success needs the SSO rollout completed before we can deliver the Acme SSO launch.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_32e62ab4d6e68e9439e878ec",
+          "start": 24,
+          "end": 115,
+          "mode": "live",
+          "slot_id": "acme_sso|requires",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_bd6d5bfcec58ee81635e440e",
+          "kind": "requires",
+          "subject_id": "beacon_sso",
+          "object_id": "sso",
+          "raw_subject": "Beacon SSO launch",
+          "raw_object": "SSO rollout",
+          "date": "",
+          "date_expression": "",
+          "quote": "The Beacon SSO launch is waiting on that same SSO rollout, so treat both customer launches as blocked on it.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_8d75ac49fd9d724a51297c90",
+          "start": 116,
+          "end": 224,
+          "mode": "live",
+          "slot_id": "beacon_sso|requires",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_8a124aef0061dd3d48b513a2",
+          "kind": "requires",
+          "subject_id": "sso",
+          "object_id": "identity",
+          "raw_subject": "SSO rollout",
+          "raw_object": "identity migration",
+          "date": "",
+          "date_expression": "",
+          "quote": "For the SSO rollout to ship, the identity migration has to be finished first.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_eb562e5c89b9a6391c801808",
+          "start": 225,
+          "end": 302,
+          "mode": "live",
+          "slot_id": "sso|requires",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_c16e278bef69145ea5317db0",
+          "kind": "requires",
+          "subject_id": "identity",
+          "object_id": "rotation",
+          "raw_subject": "identity migration",
+          "raw_object": "signing-key rotation",
+          "date": "",
+          "date_expression": "",
+          "quote": "Platform also confirmed that the identity migration must wait for the signing-key rotation to finish.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_31dd8099abd9fb91b1d519de",
+          "start": 303,
+          "end": 404,
+          "mode": "live",
+          "slot_id": "identity|requires",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_1207549066389e07e58b5886",
+          "kind": "requires",
+          "subject_id": "sso",
+          "object_id": "security",
+          "raw_subject": "SSO rollout",
+          "raw_object": "security review",
+          "date": "",
+          "date_expression": "",
+          "quote": "The security review is another required gate for the SSO rollout, alongside the migration work.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_4ae247f89c8d497355867aab",
+          "start": 405,
+          "end": 500,
+          "mode": "live",
+          "slot_id": "sso|requires",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_33b3843dad659cce664cbaac",
+          "kind": "deadline",
+          "subject_id": "sso",
+          "object_id": "",
+          "raw_subject": "SSO rollout",
+          "raw_object": "",
+          "date": "2026-11-03",
+          "date_expression": "November 3, 2026",
+          "quote": "The board still lists November 3, 2026 as the expected finish for the SSO rollout.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [
+            "invalid_subject_type"
+          ],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_6b1ec102ea61f794053da7f8",
+          "start": 501,
+          "end": 583,
+          "mode": "live",
+          "slot_id": "sso|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_2b2b4c5993c363147e75bbe3",
+          "kind": "forecast",
+          "subject_id": "identity",
+          "object_id": "",
+          "raw_subject": "identity migration",
+          "raw_object": "",
+          "date": "2026-11-03",
+          "date_expression": "November 3, 2026",
+          "quote": "For the identity migration, the engineering estimate is completion on November 3, 2026.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_aea8223c7f178c5549bd593b",
+          "start": 584,
+          "end": 671,
+          "mode": "live",
+          "slot_id": "identity|forecast",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_65ec9d4aaa20f331e0240186",
+          "kind": "forecast",
+          "subject_id": "security",
+          "object_id": "",
+          "raw_subject": "security review",
+          "raw_object": "",
+          "date": "2026-11-03",
+          "date_expression": "November 3, 2026",
+          "quote": "The security review is also expected to wrap up on November 3, 2026.",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_63424917ae865fadcb76d752",
+          "span_id": "span_5cca7aa5cfaeba20b1d806be",
+          "start": 672,
+          "end": 740,
+          "mode": "live",
+          "slot_id": "security|forecast",
+          "reviewed_at": "",
+          "review_reason": ""
+        }
+      ],
+      "expected_tuples": [
+        [
+          "forecast",
+          "identity",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        [
+          "forecast",
+          "security",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        [
+          "forecast",
+          "sso",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        [
+          "requires",
+          "acme_sso",
+          "sso",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "beacon_sso",
+          "sso",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "identity",
+          "rotation",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "sso",
+          "identity",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "sso",
+          "security",
+          "",
+          ""
+        ]
+      ],
+      "actual_tuples": [
+        [
+          "deadline",
+          "sso",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        [
+          "forecast",
+          "identity",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        [
+          "forecast",
+          "security",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        [
+          "requires",
+          "acme_sso",
+          "sso",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "beacon_sso",
+          "sso",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "identity",
+          "rotation",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "sso",
+          "identity",
+          "",
+          ""
+        ],
+        [
+          "requires",
+          "sso",
+          "security",
+          "",
+          ""
+        ]
+      ],
+      "tuple_match": false,
+      "unique_fact_count": true,
+      "all_spans_valid": false
+    }
+  ],
+  "errors": [
+    {
+      "type": "ValueError",
+      "message": "Live extraction differs from expected facts; proposals remain pending: SSO delivery plan · required work"
+    }
+  ],
+  "passed": false,
+  "finished_at": "2026-10-17T07:37:47.891225+00:00"
+}

@@ -1,0 +1,82 @@
+{
+  "type": "Edited, captioned sequence of actual UI screen captures",
+  "continuous_recording": false,
+  "live_services": true,
+  "synthetic_data": true,
+  "reviewer": "Codex UI QA",
+  "seconds": 113,
+  "scenes": [
+    {
+      "screen": "01-overview.png",
+      "duration_seconds": 9,
+      "title": "PromiseGraph | Track 03: Company Brain",
+      "caption": "Edited walkthrough of actual screens: FalkorDB Cloud and live Gemini. Synthetic baseline prepared beforehand. Codex performed the QA review. Held frames; navigation and waits cut; no voice-over."
+    },
+    {
+      "screen": "02-paths.png",
+      "duration_seconds": 10,
+      "title": "One shared dependency. Two customer promises.",
+      "caption": "Signing-key rotation is three hops from Acme and Beacon. Its November 6 forecast exceeds both November 4 deadlines. Cedar has no known linked work, so it cannot be assessed."
+    },
+    {
+      "screen": "03-live-note.png",
+      "duration_seconds": 10,
+      "title": "Raw source -> Gemini extraction",
+      "caption": "The meeting note explicitly replaces Acme's deadline with November 10, 2026. This source was sent to Gemini, not replaced with a fixture. Only full dates and approved aliases are supported."
+    },
+    {
+      "screen": "04-pending-review.png",
+      "duration_seconds": 10,
+      "title": "A proposal is not accepted knowledge",
+      "caption": "Gemini returned one pending deadline proposal. The review screen exposes the exact source quote, supplied author, span offsets, and old/new dates. QA checked the replacement and accepted it through this UI."
+    },
+    {
+      "screen": "05-revised-status.png",
+      "duration_seconds": 10,
+      "title": "One approved decision changes one outcome",
+      "caption": "Acme now has no deadline conflict in known forecasts. Beacon remains at risk. Cedar remains unassessed. The change does not claim delivery is feasible."
+    },
+    {
+      "screen": "06-agent-answer.png",
+      "duration_seconds": 12,
+      "title": "A live agent follows the evidence",
+      "caption": "The question asks what changed, why Beacon remains at risk, and whether Cedar can be assessed. Gemini selected the read tools and returned citations to sources it opened. Code computes the statuses."
+    },
+    {
+      "screen": "07-agent-tools.png",
+      "duration_seconds": 8,
+      "title": "Visible tool choices, bounded permissions",
+      "caption": "The actual model run selected all three commitments, then opened five source facts. Two read tools, four calls maximum. There are no free-form Cypher or write tools."
+    },
+    {
+      "screen": "08-source.png",
+      "duration_seconds": 8,
+      "title": "Open a citation; see the original claim",
+      "caption": "The cited revision opens its original text, author metadata, timestamp, review state, and exact span. Provenance is read from FalkorDB: fact -> span -> document -> author."
+    },
+    {
+      "screen": "09-history.png",
+      "duration_seconds": 8,
+      "title": "The earlier decision survives",
+      "caption": "A guarded write switched the active date and created SUPERSEDES. The November 4 source remains available alongside the new November 10 decision. This state also persisted after an app restart."
+    },
+    {
+      "screen": "10-cypher.png",
+      "duration_seconds": 8,
+      "title": "FalkorDB does the traversal",
+      "caption": "The executed query follows REQUIRES paths of length 1 to 8 and returns their supporting fact IDs. Read tools use GRAPH.RO_QUERY with a timeout. Documents, facts, review state and history live in the graph."
+    },
+    {
+      "screen": "11-inconsistency.png",
+      "duration_seconds": 8,
+      "title": "Uncertainty remains visible",
+      "caption": "The computed warning still shows identity migration forecast before its prerequisite signing-key rotation. This is informational, separate from the deadline status. Remaining work and delivery feasibility are unassessed."
+    },
+    {
+      "screen": "05-revised-status.png",
+      "duration_seconds": 12,
+      "title": "Verified prototype; reported limitations",
+      "caption": "52 tests passed, including 5 Cloud integrations. Live extraction evaluation: 5 correct, 2 deferred, 1 expected deferral missing after HTTP 503. Self-authored development notes, not a held-out benchmark. Reports are included."
+    }
+  ]
+}

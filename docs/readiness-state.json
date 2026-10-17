@@ -1,0 +1,206 @@
+{
+  "graph": "promisegraph_natural_20261017_073848",
+  "checked_at": "2026-10-17T07:40:50.569493+00:00",
+  "database_connected": true,
+  "documents": [
+    {
+      "title": "Customer launch commitments",
+      "state": "ready",
+      "mode": "live"
+    },
+    {
+      "title": "SSO delivery plan \u00b7 required work",
+      "state": "ready",
+      "mode": "live"
+    },
+    {
+      "title": "Platform delivery update",
+      "state": "ready",
+      "mode": "live"
+    },
+    {
+      "title": "Acme approves a revised deadline",
+      "state": "ready",
+      "mode": "live"
+    },
+    {
+      "title": "Cedar confirms a revised export date",
+      "state": "ready",
+      "mode": "live"
+    }
+  ],
+  "pending": 1,
+  "history": 1,
+  "assessments": [
+    {
+      "id": "acme_sso",
+      "deadline": "2026-11-10",
+      "status": "no_known_conflict",
+      "flags": [
+        "downstream_work_unassessed",
+        "forecast_order_conflict"
+      ],
+      "known_work_count": 4,
+      "contributors": [
+        {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering",
+          "sources": [
+            {
+              "document_id": "doc_63424917ae865fadcb76d752",
+              "title": "SSO delivery plan \u00b7 required work",
+              "fact_ids": [
+                "fact_27feed075cedcafbcd44ea34",
+                "fact_2b2b4c5993c363147e75bbe3",
+                "fact_8a124aef0061dd3d48b513a2",
+                "fact_c16e278bef69145ea5317db0",
+                "fact_f69be7ea8ee91eb0fdc29cc7"
+              ],
+              "context": [
+                "SSO rollout \u00b7 forecast",
+                "identity migration \u00b7 forecast",
+                "SSO rollout \u00b7 requires",
+                "identity migration \u00b7 requires",
+                "Acme SSO launch \u00b7 requires"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "maya",
+          "name": "Maya Chen",
+          "role": "Customer success",
+          "sources": [
+            {
+              "document_id": "doc_10fff2554b3a9b6ec0eafbfe",
+              "title": "Acme approves a revised deadline",
+              "fact_ids": [
+                "fact_6262bfd95b40397859f9e1b2"
+              ],
+              "context": [
+                "Acme SSO launch \u00b7 deadline"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "priya",
+          "name": "Priya Shah",
+          "role": "Platform",
+          "sources": [
+            {
+              "document_id": "doc_aec3faf38fa625342e599bd5",
+              "title": "Platform delivery update",
+              "fact_ids": [
+                "fact_0d04215cf53b6fbfa33bd532"
+              ],
+              "context": [
+                "signing-key rotation \u00b7 forecast"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beacon_sso",
+      "deadline": "2026-11-04",
+      "status": "at_risk",
+      "flags": [
+        "forecast_order_conflict"
+      ],
+      "known_work_count": 4,
+      "contributors": [
+        {
+          "id": "leo",
+          "name": "Leo Martin",
+          "role": "Engineering",
+          "sources": [
+            {
+              "document_id": "doc_63424917ae865fadcb76d752",
+              "title": "SSO delivery plan \u00b7 required work",
+              "fact_ids": [
+                "fact_27feed075cedcafbcd44ea34",
+                "fact_2b2b4c5993c363147e75bbe3",
+                "fact_8a124aef0061dd3d48b513a2",
+                "fact_bd6d5bfcec58ee81635e440e",
+                "fact_c16e278bef69145ea5317db0"
+              ],
+              "context": [
+                "SSO rollout \u00b7 forecast",
+                "identity migration \u00b7 forecast",
+                "SSO rollout \u00b7 requires",
+                "Beacon SSO launch \u00b7 requires",
+                "identity migration \u00b7 requires"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "maya",
+          "name": "Maya Chen",
+          "role": "Customer success",
+          "sources": [
+            {
+              "document_id": "doc_92b3fe38232094b57148f20c",
+              "title": "Customer launch commitments",
+              "fact_ids": [
+                "fact_be2a96ce2500f35c3b1649a9"
+              ],
+              "context": [
+                "Beacon SSO launch \u00b7 deadline"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "priya",
+          "name": "Priya Shah",
+          "role": "Platform",
+          "sources": [
+            {
+              "document_id": "doc_aec3faf38fa625342e599bd5",
+              "title": "Platform delivery update",
+              "fact_ids": [
+                "fact_0d04215cf53b6fbfa33bd532"
+              ],
+              "context": [
+                "signing-key rotation \u00b7 forecast"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cedar_export",
+      "deadline": "2026-11-08",
+      "status": "unknown",
+      "flags": [
+        "pending_relevant_fact",
+        "unlinked_commitment"
+      ],
+      "known_work_count": 0,
+      "contributors": [
+        {
+          "id": "maya",
+          "name": "Maya Chen",
+          "role": "Customer success",
+          "sources": [
+            {
+              "document_id": "doc_92b3fe38232094b57148f20c",
+              "title": "Customer launch commitments",
+              "fact_ids": [
+                "fact_7453b378d0ea7025261db233"
+              ],
+              "context": [
+                "Cedar data export \u00b7 deadline"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

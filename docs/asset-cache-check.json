@@ -1,0 +1,14 @@
+{
+  "asset_version": "b04825249378",
+  "served_script_matches_workspace": true,
+  "cache_control": "no-cache",
+  "database_connected": true,
+  "graph": "promisegraph_natural_20261017_073848",
+  "current_deadlines": {
+    "acme_sso": "2026-11-10",
+    "beacon_sso": "2026-11-04",
+    "cedar_export": "2026-11-12"
+  },
+  "history_records": 2,
+  "browser_rendering": "Not inspected; user screenshot showed the previous cached date format."
+}

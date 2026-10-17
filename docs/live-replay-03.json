@@ -1,0 +1,43 @@
+{
+  "mode": "saved-response replay",
+  "source_modes": [
+    "live Gemini extraction"
+  ],
+  "dataset_hash": "397745569207b53705b8f2ffd92e4d07a11fcd09559130a9e40b0b08f6216799",
+  "prompt_hash": "5d8078c6479f8fb9",
+  "counts": {
+    "correct": 5,
+    "incorrect": 0,
+    "missed": 0,
+    "deferred": 2,
+    "missing_expected_deferral": 1,
+    "failed_notes": 1
+  },
+  "failures": [
+    {
+      "case": "negated_forecast",
+      "error": "Gemini returned HTTP 503. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "negated_forecast",
+      "error": "missing_expected_deferral",
+      "expected": {
+        "tuple": [
+          "forecast",
+          "rotation",
+          "",
+          "2026-11-06",
+          ""
+        ],
+        "defer": true,
+        "flags": [
+          "not_affirmed",
+          "semantic_review_required"
+        ]
+      }
+    }
+  ],
+  "notes": 7,
+  "interpretation": "Small self-authored development set. Counts only; not a general extraction accuracy estimate. Human review is not scored as model success.",
+  "metadata_mismatches": []
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "saved-response replay",
+  "source_modes": [
+    "hand-authored fixture pipeline check; not a model run"
+  ],
+  "dataset_hash": "397745569207b53705b8f2ffd92e4d07a11fcd09559130a9e40b0b08f6216799",
+  "prompt_hash": "5d8078c6479f8fb9",
+  "counts": {
+    "correct": 5,
+    "incorrect": 0,
+    "missed": 0,
+    "deferred": 3,
+    "missing_expected_deferral": 0,
+    "failed_notes": 0
+  },
+  "failures": [],
+  "notes": 7,
+  "interpretation": "Small self-authored development set. Counts only; not a general extraction accuracy estimate. Human review is not scored as model success.",
+  "metadata_mismatches": []
+}

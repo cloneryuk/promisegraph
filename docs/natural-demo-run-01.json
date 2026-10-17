@@ -1,0 +1,157 @@
+{
+  "graph": "promisegraph_natural_20261017_073446",
+  "model": "gemini-3.5-flash-lite",
+  "temperature": 0,
+  "started_at": "2026-10-17T07:34:47.154983+00:00",
+  "review": "Codex synthetic QA checked each live extraction against the authored expected tuples and exact spans before using the ordinary guarded review method. Not human review or a held-out accuracy benchmark.",
+  "documents": [
+    {
+      "title": "Customer launch commitments",
+      "document": {
+        "id": "doc_92b3fe38232094b57148f20c",
+        "title": "Customer launch commitments",
+        "text": "Customer check-in notes / Maya\n\nAcme's CTO asked us to keep the Acme SSO launch on November 4, 2026; that's the date we committed to on the call.\nBeacon has already booked its onboarding session, so the promised date for the Beacon SSO launch remains November 4, 2026.\nFor the separate Cedar data export, we agreed to deliver by November 8, 2026.\n\nFollow-up for me: chase the export delivery plan before the next check-in. The customers only saw the launch dates, not the engineering board.",
+        "timestamp": "2026-11-01T10:00:00+05:30",
+        "timezone": "Asia/Kolkata",
+        "author_id": "maya",
+        "source_type": "meeting",
+        "content_hash": "92b3fe38232094b57148f20c",
+        "state": "ready",
+        "mode": "live",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_hash": "5d8078c6479f8fb9",
+        "created_at": "2026-10-17T13:04:47.203081+05:30",
+        "error": "",
+        "raw_response": "{\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"{\\n  \\\"facts\\\": [\\n    {\\n      \\\"kind\\\": \\\"deadline\\\",\\n      \\\"subject\\\": \\\"Acme SSO launch\\\",\\n      \\\"object\\\": \\\"\\\",\\n      \\\"date_expression\\\": \\\"November 4, 2026\\\",\\n      \\\"quote\\\": \\\"Acme's CTO asked us to keep the Acme SSO launch on November 4, 2026\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"deadline\\\",\\n      \\\"subject\\\": \\\"Beacon SSO launch\\\",\\n      \\\"object\\\": \\\"\\\",\\n      \\\"date_expression\\\": \\\"November 4, 2026\\\",\\n      \\\"quote\\\": \\\"the promised date for the Beacon SSO launch remains November 4, 2026\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    },\\n    {\\n      \\\"kind\\\": \\\"deadline\\\",\\n      \\\"subject\\\": \\\"Cedar data export\\\",\\n      \\\"object\\\": \\\"\\\",\\n      \\\"date_expression\\\": \\\"November 8, 2026\\\",\\n      \\\"quote\\\": \\\"we agreed to deliver by November 8, 2026\\\",\\n      \\\"polarity\\\": \\\"affirmed\\\",\\n      \\\"replaces_date_expression\\\": \\\"\\\"\\n    }\\n  ]\\n}\", \"thoughtSignature\": \"EmAKXgFpFH0TMaZdwZ9y9SK3oPuMN0Fp33EyjVYUGBQ61rCIsd4Vo0+dlxZueJtAyTHIocOMA0qXMT6cP8AgsJ4ID4UWLAzPBq4WXK6C0MmlTvIsIG09JeFhAxj3yKtfEKo=\"}], \"role\": \"model\"}, \"finishReason\": \"STOP\", \"index\": 0}], \"usageMetadata\": {\"promptTokenCount\": 656, \"candidatesTokenCount\": 293, \"totalTokenCount\": 949, \"promptTokensDetails\": [{\"modality\": \"TEXT\", \"tokenCount\": 656}], \"serviceTier\": \"standard\"}, \"modelVersion\": \"gemini-3.5-flash-lite\", \"responseId\": \"GCXTao-ZH_jMjuMP-cHVuQU\", \"_promisegraph_http_attempts\": [{\"status_code\": 200}]}",
+        "request_settings": "{\"temperature\": 0, \"schema_version\": 1}"
+      },
+      "facts": [
+        {
+          "id": "fact_8d7f249aad33252d38391e69",
+          "kind": "deadline",
+          "subject_id": "acme_sso",
+          "object_id": "",
+          "raw_subject": "Acme SSO launch",
+          "raw_object": "",
+          "date": "2026-11-04",
+          "date_expression": "November 4, 2026",
+          "quote": "Acme's CTO asked us to keep the Acme SSO launch on November 4, 2026",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_92b3fe38232094b57148f20c",
+          "span_id": "span_57f137757191dd2e5639cb4e",
+          "start": 32,
+          "end": 99,
+          "mode": "live",
+          "slot_id": "acme_sso|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_f97a7d29282ede1c328f7525",
+          "kind": "deadline",
+          "subject_id": "beacon_sso",
+          "object_id": "",
+          "raw_subject": "Beacon SSO launch",
+          "raw_object": "",
+          "date": "2026-11-04",
+          "date_expression": "November 4, 2026",
+          "quote": "the promised date for the Beacon SSO launch remains November 4, 2026",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [],
+          "doc_id": "doc_92b3fe38232094b57148f20c",
+          "span_id": "span_e938cd2b08843773b7af65b9",
+          "start": 199,
+          "end": 267,
+          "mode": "live",
+          "slot_id": "beacon_sso|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        },
+        {
+          "id": "fact_1f498cea65cbc91b292daf5e",
+          "kind": "deadline",
+          "subject_id": "cedar_export",
+          "object_id": "",
+          "raw_subject": "Cedar data export",
+          "raw_object": "",
+          "date": "2026-11-08",
+          "date_expression": "November 8, 2026",
+          "quote": "we agreed to deliver by November 8, 2026",
+          "old_date": "",
+          "status": "pending",
+          "validation_flags": [
+            "subject_not_in_quote"
+          ],
+          "doc_id": "doc_92b3fe38232094b57148f20c",
+          "span_id": "span_ae191296c249c3ac2a7cc0ca",
+          "start": 305,
+          "end": 345,
+          "mode": "live",
+          "slot_id": "cedar_export|deadline",
+          "reviewed_at": "",
+          "review_reason": ""
+        }
+      ],
+      "expected_tuples": [
+        [
+          "deadline",
+          "acme_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "beacon_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "cedar_export",
+          "",
+          "2026-11-08",
+          ""
+        ]
+      ],
+      "actual_tuples": [
+        [
+          "deadline",
+          "acme_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "beacon_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        [
+          "deadline",
+          "cedar_export",
+          "",
+          "2026-11-08",
+          ""
+        ]
+      ],
+      "tuple_match": true,
+      "unique_fact_count": true,
+      "all_spans_valid": false
+    }
+  ],
+  "errors": [
+    {
+      "type": "ValueError",
+      "message": "Live extraction differs from expected facts; proposals remain pending: Customer launch commitments"
+    }
+  ],
+  "passed": false,
+  "finished_at": "2026-10-17T07:34:49.825997+00:00"
+}

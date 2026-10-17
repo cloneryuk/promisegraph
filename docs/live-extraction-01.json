@@ -1,0 +1,157 @@
+{
+  "mode": "live Gemini extraction",
+  "source_modes": [
+    "live Gemini extraction"
+  ],
+  "dataset_hash": "397745569207b53705b8f2ffd92e4d07a11fcd09559130a9e40b0b08f6216799",
+  "prompt_hash": "5d8078c6479f8fb9",
+  "counts": {
+    "correct": 1,
+    "incorrect": 0,
+    "missed": 4,
+    "deferred": 0,
+    "missing_expected_deferral": 3,
+    "failed_notes": 6
+  },
+  "failures": [
+    {
+      "case": "explicit_deadline",
+      "error": "Gemini returned HTTP 503. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "explicit_deadline",
+      "error": "missed",
+      "expected": {
+        "tuple": [
+          "deadline",
+          "acme_sso",
+          "",
+          "2026-11-04",
+          ""
+        ],
+        "defer": false,
+        "flags": []
+      }
+    },
+    {
+      "case": "required_dependency",
+      "error": "Gemini returned HTTP 503. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "required_dependency",
+      "error": "missed",
+      "expected": {
+        "tuple": [
+          "requires",
+          "sso",
+          "identity",
+          "",
+          ""
+        ],
+        "defer": false,
+        "flags": []
+      }
+    },
+    {
+      "case": "approved_and_unknown_alias",
+      "error": "Gemini returned HTTP 503. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "approved_and_unknown_alias",
+      "error": "missed",
+      "expected": {
+        "tuple": [
+          "forecast",
+          "sso",
+          "",
+          "2026-11-03",
+          ""
+        ],
+        "defer": false,
+        "flags": []
+      }
+    },
+    {
+      "case": "approved_and_unknown_alias",
+      "error": "missing_expected_deferral",
+      "expected": {
+        "tuple": [
+          "forecast",
+          "",
+          "",
+          "2026-11-08",
+          ""
+        ],
+        "defer": true,
+        "flags": [
+          "unresolved_entity"
+        ]
+      }
+    },
+    {
+      "case": "negated_forecast",
+      "error": "Gemini returned HTTP 503. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "negated_forecast",
+      "error": "missing_expected_deferral",
+      "expected": {
+        "tuple": [
+          "forecast",
+          "rotation",
+          "",
+          "2026-11-06",
+          ""
+        ],
+        "defer": true,
+        "flags": [
+          "not_affirmed",
+          "semantic_review_required"
+        ]
+      }
+    },
+    {
+      "case": "relative_date",
+      "error": "Gemini returned HTTP 503. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "relative_date",
+      "error": "missing_expected_deferral",
+      "expected": {
+        "tuple": [
+          "forecast",
+          "security",
+          "",
+          "",
+          ""
+        ],
+        "defer": true,
+        "flags": [
+          "unsupported_date"
+        ]
+      }
+    },
+    {
+      "case": "explicit_replacement",
+      "error": "Gemini returned HTTP 429. Check the model name, key, quota and provider availability."
+    },
+    {
+      "case": "explicit_replacement",
+      "error": "missed",
+      "expected": {
+        "tuple": [
+          "deadline",
+          "acme_sso",
+          "",
+          "2026-11-10",
+          "2026-11-04"
+        ],
+        "defer": false,
+        "flags": []
+      }
+    }
+  ],
+  "notes": 7,
+  "interpretation": "Small self-authored development set. Counts only; not a general extraction accuracy estimate. Human review is not scored as model success.",
+  "metadata_mismatches": []
+}

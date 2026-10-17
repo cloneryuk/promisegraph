@@ -1,0 +1,90 @@
+{
+  "entities": [
+    {
+      "id": "acme_sso",
+      "kind": "commitment",
+      "name": "Acme SSO launch",
+      "customer": "Acme",
+      "aliases": [
+        "Acme SSO launch",
+        "Acme SSO commitment",
+        "Acme",
+        "Acme Corp"
+      ]
+    },
+    {
+      "id": "beacon_sso",
+      "kind": "commitment",
+      "name": "Beacon SSO launch",
+      "customer": "Beacon",
+      "aliases": [
+        "Beacon SSO launch",
+        "Beacon SSO commitment",
+        "Beacon"
+      ]
+    },
+    {
+      "id": "cedar_export",
+      "kind": "commitment",
+      "name": "Cedar data export",
+      "customer": "Cedar",
+      "aliases": [
+        "Cedar data export",
+        "Cedar"
+      ]
+    },
+    {
+      "id": "sso",
+      "kind": "work",
+      "name": "SSO rollout",
+      "aliases": [
+        "SSO rollout",
+        "SSO",
+        "single sign-on rollout"
+      ]
+    },
+    {
+      "id": "identity",
+      "kind": "work",
+      "name": "identity migration",
+      "aliases": [
+        "identity migration",
+        "authentication migration"
+      ]
+    },
+    {
+      "id": "rotation",
+      "kind": "work",
+      "name": "signing-key rotation",
+      "aliases": [
+        "signing-key rotation",
+        "signing key rotation"
+      ]
+    },
+    {
+      "id": "security",
+      "kind": "work",
+      "name": "security review",
+      "aliases": [
+        "security review"
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "maya",
+      "name": "Maya Chen",
+      "role": "Customer success"
+    },
+    {
+      "id": "leo",
+      "name": "Leo Martin",
+      "role": "Engineering"
+    },
+    {
+      "id": "priya",
+      "name": "Priya Shah",
+      "role": "Platform"
+    }
+  ]
+}
