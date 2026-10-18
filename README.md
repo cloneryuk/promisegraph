@@ -2,6 +2,8 @@
 
 **Trace customer promises to the work, decisions, and source evidence behind them.**
 
+**[Open the live app →](https://promisegraph.onrender.com/)**
+
 Track: **03 — Company Brain** · Graph Hacks / WeMakeDevs × FalkorDB · October 2026
 
 A promise made in a customer call can depend on work several tickets away. PromiseGraph extracts proposed facts from notes, tickets, and chat, asks a person to review them, then follows accepted dependencies in FalkorDB. A bounded Gemini agent chooses which commitments to assess and which source excerpts to open. Code computes the deadline conflicts; the model explains them.

@@ -2,6 +2,10 @@
 
 Track: **03 — Company Brain**
 
+Live app: **[PromiseGraph](https://promisegraph.onrender.com/)**
+
+Source repository: [cloneryuk/promisegraph](https://github.com/cloneryuk/promisegraph)
+
 Latest [readiness review](submission-readiness-review.md): interface fixes are included; public uploads, participant preparation and final visual check remain outstanding.
 
 Suggested title: **PromiseGraph — Every promise has a path**
