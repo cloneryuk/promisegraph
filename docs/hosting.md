@@ -24,6 +24,24 @@ running. Check the current price before choosing a paid plan.
 
 ## Environment variables
 
+### Temporary public judging window
+
+To allow visitors to use the shared demo without a login until the authorized
+deadline, set `PUBLIC_DEMO_UNTIL=2026-11-07T08:50:19Z` in Render. This is
+**November 7, 2026 at 2:20:19 PM IST**, twenty days from the configuration request.
+Keep `APP_ENV=production`, `AUTH_REQUIRED=true`, and both login credentials.
+The deadline suspends the login requirement only; all existing request, concurrency
+and body limits stay active. Visitors can edit and export the shared synthetic graph.
+
+The deadline is checked on every request. At or after that instant, new requests
+require login automatically, without a restart or scheduled job. Operations already
+admitted may finish. Restarting or redeploying does not extend the fixed deadline.
+Remove the variable and redeploy to close public access early. Do not remove the
+credentials: startup still validates them for use after the deadline. If you deploy
+later, the window still ends on the same date rather than twenty days after deploy.
+
+The following variables configure the underlying protected service:
+
 | Name | Value |
 | --- | --- |
 | `APP_ENV` | `production` |

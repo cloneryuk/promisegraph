@@ -9,6 +9,7 @@ import threading
 import time
 from collections import deque
 from dataclasses import dataclass, field
+from datetime import datetime
 from urllib.parse import urlparse
 
 from dotenv import dotenv_values
@@ -27,6 +28,10 @@ class SecuritySettings:
     writes_per_minute: int = 30
     ai_concurrency: int = 2
     body_bytes: int = 262144
+    public_until: float | None = None
+
+    def public_access_open(self):
+        return self.public_until is not None and time.time() < self.public_until
 
     @classmethod
     def load(cls):
@@ -38,7 +43,18 @@ class SecuritySettings:
         production = values.get("APP_ENV") == "production"
         username = values.get("DEMO_USERNAME") or ""
         password = values.get("DEMO_PASSWORD") or ""
-        required = hosted or production or flag == "true" or bool(username or password)
+        public_until = None
+        deadline = values.get("PUBLIC_DEMO_UNTIL") or ""
+        if deadline:
+            try:
+                parsed = datetime.fromisoformat(deadline.replace("Z", "+00:00"))
+                if parsed.utcoffset() is None:
+                    raise ValueError("Timezone required")
+                public_until = parsed.timestamp()
+            except (ValueError, OverflowError) as exc:
+                raise ValueError("PUBLIC_DEMO_UNTIL must be an ISO timestamp with a timezone.") from exc
+        # Retain credentials and limits even while the login prompt is suspended.
+        required = hosted or production or flag == "true" or bool(username or password) or public_until is not None
         if required and (not username or ":" in username or len(password) < 20):
             raise ValueError(
                 "Protected hosting requires DEMO_USERNAME (without ':') and "
@@ -55,6 +71,7 @@ class SecuritySettings:
             required=required,
             username=username,
             password=password,
+            public_until=public_until,
             ai_per_minute=positive("AI_REQUESTS_PER_MINUTE", 6),
             ai_per_hour=positive("AI_REQUESTS_PER_HOUR", 60),
             writes_per_minute=positive("WRITE_REQUESTS_PER_MINUTE", 30),
@@ -136,7 +153,7 @@ class DemoSecurityMiddleware:
             response = JSONResponse({"status": "ok"}, headers={"Cache-Control": "no-store"})
             return await response(scope, receive, send)
 
-        if self.settings.required and not self.authenticated(headers.get(b"authorization", "")):
+        if self.settings.required and not self.settings.public_access_open() and not self.authenticated(headers.get(b"authorization", "")):
             retry = self.limits.reserve([("login", 30, 60)])
             if retry:
                 return await reject(429, "Too many login attempts. Try again shortly.", {"Retry-After": str(retry)})

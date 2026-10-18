@@ -168,7 +168,7 @@ def test_concurrent_limit_and_exception_release():
 @pytest.fixture
 def clean_config(monkeypatch):
     monkeypatch.setattr(security, "dotenv_values", lambda _: {})
-    for key in ["RENDER", "APP_ENV", "AUTH_REQUIRED", "DEMO_USERNAME", "DEMO_PASSWORD", "AI_REQUESTS_PER_MINUTE", "AI_REQUESTS_PER_HOUR", "WRITE_REQUESTS_PER_MINUTE", "AI_MAX_CONCURRENT"]:
+    for key in ["RENDER", "APP_ENV", "AUTH_REQUIRED", "DEMO_USERNAME", "DEMO_PASSWORD", "PUBLIC_DEMO_UNTIL", "AI_REQUESTS_PER_MINUTE", "AI_REQUESTS_PER_HOUR", "WRITE_REQUESTS_PER_MINUTE", "AI_MAX_CONCURRENT"]:
         monkeypatch.delenv(key, raising=False)
     return monkeypatch
 
@@ -228,3 +228,43 @@ def test_real_app_routes_and_existing_middleware_work_behind_login():
         assert called == [True]
     finally:
         app.dependency_overrides.clear()
+
+
+def test_public_window_expires_without_restart_and_limits_continue(monkeypatch):
+    now = [1000.0]
+    monkeypatch.setattr(security.time, "time", lambda: now[0])
+    app = protected_app(replace(SETTINGS, public_until=1100, ai_per_minute=1))
+    client = TestClient(app)
+    assert client.get("/").status_code == 200
+    assert client.get("/api/export").status_code == 200
+    assert client.get("/").headers["cache-control"] == "no-store"
+    assert client.post("/documents", json={}).status_code == 200
+    assert client.post("/assess", json={}).status_code == 429
+    now[0] = 1100
+    assert client.get("/").status_code == 401
+    assert client.get("/api/export").status_code == 401
+    assert client.post("/facts/example/review", json={}).status_code == 401
+    assert client.get("/", auth=AUTH).status_code == 200
+    # The expiry must not reset usage counters.
+    assert client.post("/assess", json={}, auth=AUTH).status_code == 429
+    # Restarting with the same absolute deadline must not reopen public access.
+    assert TestClient(protected_app(replace(SETTINGS, public_until=1100))).get("/").status_code == 401
+
+
+@pytest.mark.parametrize("deadline", ["tomorrow", "2026-11-07T08:50:19", "2026-99-07T08:50:19Z"])
+def test_invalid_public_deadline_stops_startup(clean_config, deadline):
+    clean_config.setenv("PUBLIC_DEMO_UNTIL", deadline)
+    with pytest.raises(ValueError, match="ISO timestamp"):
+        SecuritySettings.load()
+
+
+def test_public_window_still_requires_credentials_and_uses_absolute_time(clean_config):
+    clean_config.setenv("PUBLIC_DEMO_UNTIL", "2026-11-07T14:20:19+05:30")
+    with pytest.raises(ValueError, match="Protected hosting requires"):
+        SecuritySettings.load()
+    clean_config.setenv("DEMO_USERNAME", "judge")
+    clean_config.setenv("DEMO_PASSWORD", PASSWORD)
+    configured = SecuritySettings.load()
+    assert configured.required
+    clean_config.setenv("PUBLIC_DEMO_UNTIL", "2026-11-07T08:50:19Z")
+    assert configured.public_until == SecuritySettings.load().public_until

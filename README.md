@@ -31,6 +31,11 @@ Open **http://127.0.0.1:8000**. Do not overwrite an existing `.env`. The conveni
 
 The local UI loads without credentials, but it does not fabricate graph results. A failed database operation is an error, never an empty successful assessment. The app is a **shared-workspace prototype**. Hosted demos now support a password gate and bounded request rates; Render and production mode refuse to start without credentials. Follow [protected hosting setup](docs/hosting.md) before exposing it. This does not provide separate user accounts or tenant permissions.
 
+An optional `PUBLIC_DEMO_UNTIL` timestamp temporarily allows public access while
+retaining all request limits. The same process restores the password requirement
+on expiry. This exposes the shared synthetic workspace, including editing and exports;
+it does not create separate visitor workspaces. See the hosting guide for setup.
+
 For the exact dependency versions resolved during verification, install `requirements-lock.txt`. Check configuration without exposing credentials using `python -m scripts.check_connection`. Package the source without `.env` using `python scripts/package.py --out ../PromiseGraph-submission.zip`.
 
 ### Optional Docker database
