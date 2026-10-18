@@ -199,9 +199,9 @@ This is a focused prototype with a small approved entity roster and synthetic so
 
 ## AI assistance and participant contribution
 
-OpenAI Codex substantially assisted implementation, UI, tests, and documentation. The participant supplied the project concept, detailed failure analysis, scope decisions, and implementation requirements. Submission requires the participant to run and verify the app, inspect the actual results, understand the risk logic and guarded queries, and accurately describe their contribution. Do not claim hand-written implementation or verification that has not happened.
+I developed the project concept, analyzed failure cases, and defined the scope and implementation requirements. OpenAI Codex substantially assisted with implementation, UI, tests, and documentation.
 
-All Northstar Labs, customer names, people, notes, and tickets are synthetic. Fonts use Google Fonts with local system fallbacks. No real customer data is required.
+All organizations, customers, people, notes, and tickets in the demo are synthetic. No real customer data is used. Fonts use Google Fonts with local system fallbacks.
 
 ## Submission
 
