@@ -11,6 +11,7 @@ from .schemas import DocumentInput, ReviewInput, AskInput, DemoInput
 from .ingest import catalog
 from .agent import run_agent
 from .demo import examples, load_demo
+from .security import DemoSecurityMiddleware, SecuritySettings
 
 
 def get_service():
@@ -152,3 +153,8 @@ def export(service: Service = Depends(get_service)):
 @app.get("/setup")
 def setup():
     return FileResponse(ROOT / "docs/setup.md", media_type="text/plain")
+
+
+# Outermost middleware also protects static files, OpenAPI and error responses.
+# Configuration is checked at import so a misconfigured hosted deploy fails closed.
+app.add_middleware(DemoSecurityMiddleware, settings=SecuritySettings.load())

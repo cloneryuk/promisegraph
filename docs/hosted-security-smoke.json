@@ -1,0 +1,13 @@
+{
+  "unauthenticated /": true,
+  "unauthenticated /api/export": true,
+  "unauthenticated /docs": true,
+  "unauthenticated /api/health": true,
+  "unauthenticated /openapi.json": true,
+  "authenticated page": true,
+  "connected database": true,
+  "Gemini configured": true,
+  "invalid operation rejected": true,
+  "request quota enforced": true,
+  "read still available": true
+}

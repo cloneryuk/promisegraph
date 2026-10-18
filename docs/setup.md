@@ -68,6 +68,6 @@ macOS/Linux: `sh start.sh`. The app needs network access to your database and Ge
 - HTTP 400/404 from Gemini: verify model availability and name. HTTP 403: check project/key access. HTTP 429: check quota, wait or choose available capacity. No canned result replaces a failed live call.
 - A review is blocked: inspect validation flags. The prototype supports only explicit full dates and approved aliases from `data/entities.json`. Reject the proposal or add a corrected source.
 - Duplicate ingestion keeps its original mode and review state. Use a new graph when comparing live extraction with rehearsal.
-- Run exactly one app worker. The prototype has no login or multi-tenant controls; bind it to localhost.
+- Run exactly one app worker. Local mode binds to localhost. For a hosted shared demo, configure the password gate and request limits in [hosting.md](hosting.md); per-user accounts and tenant controls are not implemented.
 
 FalkorDB Cloud is explicitly allowed by rule 4: https://www.wemakedevs.org/hackathons/falkordb/rules

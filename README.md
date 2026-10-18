@@ -8,7 +8,7 @@ A promise made in a customer call can depend on work several tickets away. Promi
 
 In the synthetic example, both Acme and Beacon depend on signing-key rotation through three hops. Its forecast is later than both customer deadlines. Accepting an explicit Acme deadline replacement changes Acme's verdict, preserves the earlier decision, and leaves Beacon at risk. Cedar has no known linked work and remains **Cannot assess**.
 
-**Verified build:** 57 Python tests passed, including 6 FalkorDB Cloud integration tests, plus 16 deterministic JavaScript interface tests. Live Gemini extraction, evidence tool calls, supersession, and app-restart persistence were checked. [Detailed results and limitations](docs/verification.md) · [Submission checklist](docs/submission.md).
+**Verified build:** 84 Python tests passed, including 27 access-control/request-limit tests and 6 FalkorDB Cloud integration tests, plus 16 deterministic JavaScript interface tests. Live Gemini extraction, evidence tool calls, supersession, and app-restart persistence were checked previously; protected HTTP access was checked on October 18. [Detailed results and limitations](docs/verification.md) · [Submission checklist](docs/submission.md).
 
 The latest natural-note demonstration extracted all 14 expected proposals across five documents with valid source spans. Its live agent completed without fallback. Three earlier attempts exposed invalid model proposals and are preserved, so this successful development replay is not an accuracy estimate. [Saved run](docs/natural-demo-run.json). Fresh browser verification of the interface refinements was blocked. [Submission readiness review](docs/submission-readiness-review.md).
 
@@ -29,7 +29,7 @@ Copy-Item .env.example .env
 
 Open **http://127.0.0.1:8000**. Do not overwrite an existing `.env`. The convenience launchers `start.ps1` and `start.sh` create it only if absent.
 
-The UI loads without credentials, but it does not fabricate graph results. A failed database operation is an error, never an empty successful assessment. The app is a **single-user local prototype**; do not expose it publicly without authentication and deployment hardening.
+The local UI loads without credentials, but it does not fabricate graph results. A failed database operation is an error, never an empty successful assessment. The app is a **shared-workspace prototype**. Hosted demos now support a password gate and bounded request rates; Render and production mode refuse to start without credentials. Follow [protected hosting setup](docs/hosting.md) before exposing it. This does not provide separate user accounts or tenant permissions.
 
 For the exact dependency versions resolved during verification, install `requirements-lock.txt`. Check configuration without exposing credentials using `python -m scripts.check_connection`. Package the source without `.env` using `python scripts/package.py --out ../PromiseGraph-submission.zip`.
 
@@ -123,7 +123,7 @@ RETURN f.id
 
 ### Named graphs and isolation
 
-`FALKORDB_GRAPH` selects one named graph for this app process. Rehearsal, live demonstration, and integration scenarios use separate names on one FalkorDB instance; each integration test creates a unique `pg_test_...` graph and deletes only that test graph. This keeps their records separate. The sidebar's “Workspace 01” is a display label, not tenant routing. Authentication, per-tenant authorization, and concurrent multi-user isolation are not implemented.
+`FALKORDB_GRAPH` selects one named graph for this app process. Rehearsal, live demonstration, and integration scenarios use separate names on one FalkorDB instance; each integration test creates a unique `pg_test_...` graph and deletes only that test graph. This keeps their records separate. The sidebar's “Workspace 01” is a display label, not tenant routing. Hosted authentication is one shared demo login; per-tenant authorization and concurrent multi-user isolation are not implemented.
 
 ## Deterministic status and uncertainty
 

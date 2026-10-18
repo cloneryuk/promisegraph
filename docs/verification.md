@@ -2,6 +2,28 @@
 
 This file is updated after local checks. Database and model checks require credentials; a skipped check is not a pass.
 
+## Protected hosting update — October 18, 2026
+
+The current full Python suite passed **84 tests, 0 skipped**, including 27 new
+security checks and all six actual FalkorDB Cloud integrations. All 16 existing
+JavaScript interface checks also passed. See `hosting-test-results.xml` for the
+Python run. No HTML, CSS or browser JavaScript changed in this update.
+
+Security checks cover missing and malformed credentials, private routes and API
+documentation, shared request limits and expiry, concurrent operations, exception
+cleanup, cross-origin/form requests, streamed oversized bodies, and startup that
+fails closed when hosted credentials are missing. A separate Uvicorn process with
+production settings confirmed actual HTTP 401/429 behavior, authenticated pages,
+and the real database connection; see `hosted-security-smoke.json`. That smoke
+check used invalid agent input to exercise rate limits without spending Gemini
+requests; it does not claim a fresh live extraction or agent evaluation.
+
+The shared login is suitable for a restricted synthetic demonstration. It does
+not provide per-user permissions, tenant isolation or durable cost limits. In-memory
+limits reset when the process restarts; one instance and one worker are required.
+Only `/healthz`, containing process liveness, is public. Render deployment itself
+has not been performed. Older dated checks below describe earlier development states.
+
 | Check | Status |
 | --- | --- |
 | Python syntax and browser JavaScript syntax | Passed on October 16, 2026 |

@@ -8,6 +8,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 FOLDERS = {"app", "data", "docs", "eval", "tests", "scripts", ".github"}
 FILES = {
+    ".python-version",
     ".env.example",
     ".gitignore",
     "requirements.txt",
@@ -32,7 +33,11 @@ def package(target):
         relative = path.relative_to(ROOT)
         if any(part in SKIP for part in relative.parts):
             continue
-        if relative.name == ".env" or relative.suffix in (".pyc", ".zip"):
+        if (
+            relative.name == ".env"
+            or (relative.name.startswith(".env.") and relative.name != ".env.example")
+            or relative.suffix in (".pyc", ".zip", ".mp4", ".webm", ".mov")
+        ):
             continue
         if relative.parts[0] in FOLDERS or str(relative) in FILES:
             selected.append((path, relative))
