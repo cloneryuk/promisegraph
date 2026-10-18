@@ -36,7 +36,7 @@ The current graph contains five live-extracted documents, one valid pending Ceda
 
 1. **Publish the repository and video, then submit their actual URLs.** The local ZIP does not complete event submission. These uploads are still pending.
 2. **Personally rehearse and explain the project.** Know the risk comparison, missing-evidence behavior, `REQUIRES*1..8`, source-span links and guarded `SUPERSEDES` update. Retain the AI-assistance disclosure and accurately describe your contribution.
-3. **Make the demo understandable without this conversation.** The included 113-second video is a disclosed edited sequence of actual screenshots. A participant-narrated recording showing the clicks and explaining the result would better demonstrate understanding. Use a fresh demo graph to replay the initial risk -> reviewed revision sequence; the current graph already contains the accepted revision. Do not present repeated ingestion as a new extraction.
+3. **Make the separately hosted demonstration understandable without this conversation.** Explain the actual results and disclose edits, synthetic data and preparation. Use a fresh graph to replay the initial risk -> reviewed revision sequence. Do not present repeated ingestion as a new extraction.
 4. **Inspect the final UI after refresh.** Check source details collapsed/expanded, review controls, an actual agent answer, citations, and a narrow customer question. Browser automation was blocked during this review.
 
 ## Scope to explain honestly

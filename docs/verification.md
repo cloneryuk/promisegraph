@@ -14,7 +14,6 @@ This file is updated after local checks. Database and model checks require crede
 | Actual browser rendering and interactions | Earlier build passed connected ingestion, review, supersession, live agent calls and citations. Current interface refinements have code-level tests, but fresh visual inspection remains blocked by browser-tool access policy. |
 | Live Gemini tool protocol | Passed against explicitly labeled test-fixture tool results: model selected commitment scope, opened three evidence facts, and returned valid citations. This is not a FalkorDB-backed product demo. See agent-protocol-smoke.json. |
 | App stop/restart with database persistence | Passed. Four live-extracted documents, accepted revision, old/new history and all three expected statuses persisted after restarting Uvicorn. See live-revision-result.json. |
-| Demonstration video | demo-walkthrough.mp4: 113-second edited sequence of actual connected UI screen captures, with captions and held frames. It is not a continuous screen recording. Navigation, waits and a citation-format repair are cut; no voice-over. See demo-manifest.json. |
 | Public source repository and event submission | Not published / not submitted |
 
 Initial environment finding: the machine-wide FastAPI and Starlette versions were incompatible. A new isolated virtual environment was installed from requirements.txt and its tests passed without dependency conflicts. Run the app in its own virtual environment.
@@ -34,19 +33,19 @@ Changing models or retrying infrastructure failures does not erase the earlier r
 
 The initially supplied TLS setting did not match the Cloud endpoint. An unauthenticated PING established its standard Redis protocol, and the user confirmed a `falkor://` / `redis://` connection prefix. Setting `FALKORDB_SSL=false` for that endpoint resolved the connection. This is endpoint-specific; use TLS for endpoints that specify `falkors://` or `rediss://`.
 
-## Connected revision and agent walkthrough
+## Connected revision and agent checks
 
 On October 17, the browser sent the synthetic revision note to Gemini. It returned one valid pending proposal with the new date and explicit earlier date. Codex checked the source and operated the normal review controls during QA; this must not be presented as a human review study. Acme became `no_known_conflict`, Beacon stayed `at_risk`, and Cedar stayed `unknown`. The informational forecast-order warning remained. A subsequent app restart preserved these results and the old/new history.
 
-`live-graph-agent.json` contains an actual graph-backed Gemini run, its tool choices, answer, and raw responses. It used two tools and opened six facts. A separate browser run opened five facts and displayed working source buttons; its actual screens appear in the video. The earlier fixture-only protocol smoke remains labeled separately.
+`live-graph-agent.json` contains an actual graph-backed Gemini run, its tool choices, answer, and raw responses. It used two tools and opened six facts. A separate browser run opened five facts and displayed working source buttons. The earlier fixture-only protocol smoke remains labeled separately.
 
 A development browser run had used the disclosed deterministic fallback after missing the required citation format. A later live run revealed comma-grouped citations; validation now checks every grouped ID and normalizes valid groups to individual source buttons. Regression tests reject invented or unopened IDs inside a group. Citation validation checks IDs and known dates, not semantic entailment of every generated sentence. Deterministic status cards remain the authoritative assessment.
 
-The prepared screen captures are from real actions and responses, but the video is an edited walkthrough with held frames, not a continuous take or a latency benchmark. The examples deliberately use explicit years and approved aliases. The included evaluation is small and self-authored; report counts and provider failures, not generalized accuracy percentages.
+The examples deliberately use explicit years and approved aliases. The included evaluation is small and self-authored; report counts and provider failures, not generalized accuracy percentages.
 
 ## Source-card display update
 
-The source cards now place model name, prompt version and completed processing status inside a collapsed **Extraction details** section. Original text, author, timestamp, source type and extraction mode remain on the card. Failed/in-progress extraction stays visible. **Under the hood** was renamed **Query details** and remains collapsed by default. The existing video precedes these display changes. JavaScript syntax validation passed; a fresh visual check was unavailable because the browser tool blocked page access. No backend extraction, review, or risk logic changed, and the AI-assistance disclosure is retained.
+The source cards now place model name, prompt version and completed processing status inside a collapsed **Extraction details** section. Original text, author, timestamp, source type and extraction mode remain on the card. Failed/in-progress extraction stays visible. **Under the hood** was renamed **Query details** and remains collapsed by default. JavaScript syntax validation passed; a fresh visual check was unavailable because the browser tool blocked page access. No backend extraction, review, or risk logic changed, and the AI-assistance disclosure is retained.
 
 ## Interface reliability review
 
@@ -62,7 +61,6 @@ Three development attempts are retained as `natural-demo-run-01.json`, `natural-
 
 The resulting graph has five live documents, one pending proposal, and one supersession link. Acme is `no_known_conflict`, Beacon is `at_risk`, and Cedar is `unknown`. Beacon's proof has three dependency hops and links Maya, Leo, and Priya through their actual source authorship. The agent selected its read tools and returned a cited answer without template fallback; the saved report includes raw model responses and per-step query traces. Earlier graphs remain intact. The local app now uses this new graph; exports and the ZIP never include connection credentials.
 
-The existing MP4 and screenshot predate these changes. They are retained as an earlier demonstration, not presented as current visual verification. Use `demo-script.md` for a new continuous walkthrough.
 
 ## Date presentation and asset refresh
 

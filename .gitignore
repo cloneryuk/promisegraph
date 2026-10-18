@@ -7,3 +7,8 @@ data/runtime/
 eval/runs/*
 !eval/runs/.gitkeep
 *.zip
+
+# Keep demonstration videos outside the source repository.
+*.mp4
+*.webm
+*.mov

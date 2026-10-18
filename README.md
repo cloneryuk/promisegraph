@@ -8,11 +8,10 @@ A promise made in a customer call can depend on work several tickets away. Promi
 
 In the synthetic example, both Acme and Beacon depend on signing-key rotation through three hops. Its forecast is later than both customer deadlines. Accepting an explicit Acme deadline replacement changes Acme's verdict, preserves the earlier decision, and leaves Beacon at risk. Cedar has no known linked work and remains **Cannot assess**.
 
-**Verified build:** 57 Python tests passed, including 6 FalkorDB Cloud integration tests, plus 16 deterministic JavaScript interface tests. Live Gemini extraction, evidence tool calls, supersession, and app-restart persistence were checked. [Detailed results and limitations](docs/verification.md) · [Earlier captioned demo video](docs/demo-walkthrough.mp4) · [Submission checklist](docs/submission.md).
+**Verified build:** 57 Python tests passed, including 6 FalkorDB Cloud integration tests, plus 16 deterministic JavaScript interface tests. Live Gemini extraction, evidence tool calls, supersession, and app-restart persistence were checked. [Detailed results and limitations](docs/verification.md) · [Submission checklist](docs/submission.md).
 
-The latest natural-note demonstration extracted all 14 expected proposals across five documents with valid source spans. Its live agent completed without fallback. Three earlier attempts exposed invalid model proposals and are preserved, so this successful development replay is not an accuracy estimate. [Saved run](docs/natural-demo-run.json). Fresh browser verification of the interface refinements was blocked; the included video shows the earlier UI. [Submission readiness review](docs/submission-readiness-review.md).
+The latest natural-note demonstration extracted all 14 expected proposals across five documents with valid source spans. Its live agent completed without fallback. Three earlier attempts exposed invalid model proposals and are preserved, so this successful development replay is not an accuracy estimate. [Saved run](docs/natural-demo-run.json). Fresh browser verification of the interface refinements was blocked. [Submission readiness review](docs/submission-readiness-review.md).
 
-The 113-second video uses actual connected UI screen captures held for reading, with navigation and waits cut. Synthetic baseline preparation and Codex-operated QA review are disclosed; it is not a continuous recording.
 
 ![Earlier connected build: commitment outcomes after the revision](docs/ui-preview.png)
 
@@ -46,7 +45,7 @@ Cloud users can skip this. With Docker installed, run `docker compose up -d` in 
 4. Acme changes to **No deadline conflict in known forecasts**. Beacon stays **At risk**. The forecast-order inconsistency remains visible.
 5. Run the scripted rehearsal agent or the live Gemini agent. The trace labels where each tool selection came from.
 
-For a genuine model demonstration, use a fresh graph name, click **Extract demo notes with Gemini**, review the returned proposals, and then extract the revision note live. The rehearsal and live ingestion modes cannot silently replace each other for the same document. [Demo script](docs/demo-script.md).
+For a genuine model demonstration, use a fresh graph name, click **Extract demo notes with Gemini**, review the returned proposals, and then extract the revision note live. The rehearsal and live ingestion modes cannot silently replace each other for the same document.
 
 The examples are synthetic customer call notes, an engineering handoff ticket, and a platform chat, with ordinary surrounding context. They deliberately retain full dates and approved entity names. Editing their displayed text is not a data migration: changed notes must be extracted again in a fresh graph so quotes, offsets, and model records stay consistent.
 
